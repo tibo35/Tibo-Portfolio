@@ -68,6 +68,12 @@ const expandArray = Array.from(expandButtons).entries();
 const triggerArray = Array.from(triggers).entries();
 const reduceArray = Array.from(reduceButtons).entries();
 
+
+  // MODALS Z-INDEX
+
+
+
+
   // OPEN CLOSE FINDER
   // ===================================================
 
@@ -123,184 +129,99 @@ readMe.addEventListener('dblclick', toggleReadMe);
 
 
 
-  // function toggleModal(){
-  //   modalWork1.classList.toggle('show-modal');
-  // }
-  // openWork1.addEventListener('dblclick', () => {
-  //   modalWork1.classList.toggle('show-modal');
-  //   closeButtons.addEventListener("click", toggleModal);
-  //   });
 
 
+// DRAG
+
+document.querySelectorAll('.modal').forEach((item) => {
+
+  item.addEventListener('mousedown', mousedown);
+  
+  function mousedown(e){
+  
+      window.addEventListener('mousemove', mousemove);
+      window.addEventListener('mouseup', mouseup);
+      
+      let prevX = e.clientX; // 2
+      let prevY = e.clientY; // 2
+  
+      function mousemove(e){
+          let newX = prevX - e.clientX; // 2-3 =-1
+          let newY = prevY - e.clientY; // 2 -2 = 0
+  
+          const rect = item.getBoundingClientRect();
+  
+          item.style.left = rect.left - newX + "px"; // 200 - - 1 = 201
+          item.style.top = rect.top - newY + "px";
+  
+          prevX = e.clientX;
+          prevY = e.clientY;
+      }
+  
+      function mouseup(){
+          window.removeEventListener('mousemove', mousemove);
+          window.removeEventListener('mouseup', mouseup);
+      }
+  }
+});
 
 
+// const el = document.querySelector('.drag');
 
+// el.addEventListener('mousedown', mousedown);
 
+// function mousedown(e){
 
+//     window.addEventListener('mousemove', mousemove);
+//     window.addEventListener('mouseup', mouseup);
+    
+//     let prevX = e.clientX; // 2
+//     let prevY = e.clientY; // 2
 
+//     function mousemove(e){
+//         let newX = prevX - e.clientX; // 2-3 =-1
+//         let newY = prevY - e.clientY; // 2 -2 = 0
 
-// // OPEN CLOSE EXPAND MODALS
-// // ==================================================
-// //  MODAL ABOUT
-// // ==================
+//         const rect = el.getBoundingClientRect();
 
-// const close = document.getElementById('close-about');
-// const reduce = document.getElementById('reduce-about');
-// const expand = document.getElementById('open-about');
+//         el.style.left = rect.left - newX + "px"; // 200 - - 1 = 201
+//         el.style.top = rect.top - newY + "px";
 
-// const about = document.querySelector('.items-about');
-// const modalAbout = document.querySelector('.modal-about');
+//         prevX = e.clientX;
+//         prevY = e.clientY;
+//     }
 
-// //OPEN
-// about.addEventListener('dblclick', () => {
-
-//   // if modal skills is open, close it and open About instead
-//   if(modalSkills.style.display="flex"){
-//     modalSkills.style.display="none"
-//   }
-// modalAbout.style.display='flex';
-// });
-
-// //CLOSE
-// close.addEventListener('click', () => {
-//   modalAbout.style.display='none';
-//   });
-
-// // REDUCE  
-// reduce.addEventListener('click', () => {
-//   modalAbout.style.display='none';
-//   });
-
-//   // EXPAND 
-// expand.addEventListener('click', () => {
-//   if (modalAbout.className==='modal-about') {
-//     modalAbout.className='modal-expand';
-//   } else {
-//   modalAbout.className = 'modal-about';
-//   }
-//   });
-
-
-// //  MODAL SKILLS
-// // ==================
-
-// const closeSkills = document.getElementById('close-skills');
-// const reduceSkills = document.getElementById('reduce-skills');
-// const expandSkills = document.getElementById('open-skills');
-
-
-
-// const skills = document.querySelector('.items-skills');
-// const modalSkills = document.querySelector('.modal-skills');
-
-// //OPEN
-// skills.addEventListener('dblclick', () => {
-//     // if modal about is open, close it and open Skills instead
-//   if(modalAbout.style.display="flex"){
-//     modalAbout.style.display="none"
-//   }
-// modalSkills.style.display='flex';
-// });
-
-// //CLOSE
-// closeSkills.addEventListener('click', () => {
-//   modalSkills.style.display='none';
-//   });
-
-// // REDUCE  
-// reduceSkills.addEventListener('click', () => {
-//   modalSkills.style.display='none';
-//   });
-
-//   // EXPAND 
-// expandSkills.addEventListener('click', () => {
-//   if (modalSkills.className==='modal-skills') {
-//     modalSkills.className='modal-expand';
-//   } else {
-//   modalSkills.className = 'modal-skills';
-//   }
-//   });
-
-// //  MODAL WORK
-// // ==================
-
-// const closeWork = document.getElementById('close-work');
-// const reduceWork = document.getElementById('reduce-work');
-// const expandWork = document.getElementById('open-work');
-
-// const work = document.querySelector('.items-work');
-// const modalWork = document.querySelector('.modal-work');
-
-// //OPEN
-// work.addEventListener('dblclick', () => {
-//     // if modal about is open, close it and open WORK instead
-//   if(modalAbout.style.display="flex") {
-//     modalAbout.style.display="none";
-//   }
-// modalWork.style.display='flex';
-// });
-
-// //CLOSE
-// closeWork.addEventListener('click', () => {
-//   modalWork.style.display='none';
-//   });
-
-// // REDUCE  
-// reduceWork.addEventListener('click', () => {
-//   modalSkills.style.display='none';
-//   });
-
-//   // EXPAND 
-// expandWork.addEventListener('click', () => {
-//   if (modalWork.className==='modal-work') {
-//     modalWork.className='modal-expand';
-//   } else {
-//   modalWork.className = 'modal-work';
-//   }
-//   });
-
-// //  MODAL WORK - WORK1
-// // ==================
-// const closeWork1 = document.getElementById('close-work1');
-// const reduceWork1 = document.getElementById('reduce-work1');
-// const expandWork1 = document.getElementById('open-work1');
-
-// const openWork1 = document.querySelector('.item-work1');
-// const modalWork1 = document.querySelector('.modal-work1');
-
-
-// openWork1.addEventListener('dblclick', () => {
-// modalWork1.style.display='flex';
-// });
-
-// //OPEN
-// openWork1.addEventListener('dblclick', () => {
-//   // if modal about is open, close it and open WORK instead
-// if(modalAbout.style.display="flex") {
-//   modalAbout.style.display="none";
+//     function mouseup(){
+//         window.removeEventListener('mousemove', mousemove);
+//         window.removeEventListener('mouseup', mouseup);
+//     }
 // }
-// modalWork1.style.display='flex';
-// });
+// const el = document.querySelector('.theDiv');
 
-// //CLOSE
-// closeWork1.addEventListener('click', () => {
-// modalWork1.style.display='none';
-// modalWork.style.display="none";
-// });
+// el.addEventListener('mousemove', mousedown);
 
-// // REDUCE  
-// reduceWork1.addEventListener('click', () => {
-// modalWork1.style.display='none';
-// });
+// function mousedown(e) {
+//   window.addEventListener('mousemove', mousemove);
+//   window.addEventListener('mouseup', mouseup);
 
-// // EXPAND 
-// expandWork1.addEventListener('click', () => {
-// if (modalWork1.className==='modal-work') {
-//   modalWork1.className='modal-expand';
-// } else {
-// modalWork1.className = 'modal-work';
+//   let prevX = e.clientX;
+//   let prevY = e.clientY;
+
+//   function mousemove(e){
+//     let newX = prevX - e.clientX;
+//     let newY = prevY - e.clientY;
+
+//     const rect = el.getBoundingClientRect();
+
+//     el.style.left = rect.left - newX + 'px';
+//     el.style.top = rect.top - newY + 'px';
+
+//     prevX = e.clientX;
+//     prevY = e.clientY;
+//   }
+//   function mouseup(){}
 // }
-// });
+
 
 
 

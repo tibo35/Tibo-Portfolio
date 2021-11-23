@@ -15,7 +15,8 @@ body {
   font-size: 14px;
   font-weight: 300;
   font-family: "San Francisco";
-  background-image: url("/Users/umut/Documents/CODE/Mac - portofilio/ressources/background.jpeg");
+  background-repeat: no-repeat;
+  background-image: url("/Users/umut/Documents/CODE/Macportfolio/ressources/background.jpeg");
 }
 
 nav {
@@ -26,6 +27,7 @@ nav {
   justify-content: space-between;
   box-shadow: 0.1px 0.1px 35px rgba(0, 0, 0, 0.242);
 }
+
 .nav-left,
 .nav-right {
   display: flex;
@@ -118,7 +120,7 @@ nav {
   font-weight: 700;
 }
 
-/* MODAL - ABOUT - SKILLS - WORK
+/* MODALS - ABOUT - SKILLS - WORK
 ================================= */
 .modal {
   display: flex;
@@ -137,6 +139,7 @@ nav {
 .show-modal {
   visibility: visible;
 }
+
 .modal-expand {
   left: 0;
   visibility: visible;
@@ -235,7 +238,8 @@ nav {
 
 /* MODAL WORK 
 ============================*/
-.modal-work1, .modal-work2 {
+.modal-work1,
+.modal-work2 {
   height: 80%;
   width: 60%;
   top: 60px;
