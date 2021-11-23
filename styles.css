@@ -1,0 +1,257 @@
+* {
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "San Francisco";
+  font-weight: 400;
+  src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-regular-webfont.woff");
+}
+body {
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  font-weight: 300;
+  font-family: "San Francisco";
+  background-image: url("/Users/umut/Documents/CODE/Mac - portofilio/ressources/background.jpeg");
+}
+
+nav {
+  background-color: white;
+  opacity: 0.8;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  box-shadow: 0.1px 0.1px 35px rgba(0, 0, 0, 0.242);
+}
+.nav-left,
+.nav-right {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  margin: 0;
+  align-items: center;
+}
+.nav-left li,
+.nav-right li {
+  padding-right: 1.1rem;
+  align-items: center;
+}
+.nav-right li img {
+  margin-top: 0.3rem;
+}
+.apple-logo {
+  margin-right: 1rem;
+  margin-top: 0.1rem;
+}
+.nav-left li .finder {
+  font-weight: bolder;
+}
+.list-nav {
+  display: none;
+}
+.list-nav-visible {
+  display: block;
+}
+
+/* MAIN 
+================================= */
+
+/* DESKTOP 
+================================= */
+.files-containers {
+  display: grid;
+  grid-template-columns: repeat(8, 70px);
+  grid-template-rows: repeat(6, 100px);
+  gap: 1rem;
+}
+.container-about,
+.container-work,
+.container-skills,
+.container-linkedin {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  overflow-y: auto;
+}
+.items-about:active,
+.items-work:active,
+.items-skills:active,
+.items-linkedin:active {
+  background-color: rgb(0, 99, 225);
+}
+
+.-work {
+  grid-column: 2/3;
+  grid-row: 3/4;
+}
+.-about {
+  grid-column: 3/4;
+  grid-row: 2/3;
+}
+.-skills {
+  grid-column: 2/3;
+  grid-row: 2/3;
+}
+
+.-linkedin {
+  grid-column: 2/3;
+  grid-row: 6/7;
+}
+.items-work img,
+.items-about img,
+.items-skills img,
+.item-linkedin img {
+  margin: 0;
+  padding: 0;
+}
+.items-work p,
+.items-about p,
+.items-skills p,
+.items-linkedin p {
+  color: white;
+  margin: 0;
+  padding: 0;
+  font-weight: 700;
+}
+
+/* MODAL - ABOUT - SKILLS - WORK
+================================= */
+.modal {
+  display: flex;
+  visibility: hidden;
+  flex-direction: column;
+  position: absolute;
+  background-color: white;
+  height: 80%;
+  width: 70%;
+  top: 80px;
+  left: 250px;
+  border-radius: 15px;
+  box-shadow: 1px 1px 35px rgba(0, 0, 0, 0.242);
+}
+
+.show-modal {
+  visibility: visible;
+}
+.modal-expand {
+  left: 0;
+  visibility: visible;
+  height: 95%;
+  width: 100%;
+  top: 26px;
+}
+
+.dot-close,
+.dot-reduce,
+.dot-open {
+  height: 12px;
+  width: 12px;
+  border-radius: 50%;
+  display: inline-block;
+  margin: 3px;
+}
+.buttons-window {
+  margin: 10px 37% 0px 15px;
+}
+.dot-close {
+  background-color: #ff605c;
+}
+.dot-reduce {
+  background-color: #ffbd44;
+}
+.dot-open {
+  background-color: #00ca4e;
+}
+.modal-nav {
+  display: flex;
+  flex-direction: row;
+  background-color: rgb(232, 234, 237);
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.title-skills {
+  font-size: 35px;
+  text-align: center;
+  margin-top: 40px;
+  border-bottom: 3px black solid;
+  padding-bottom: 10px;
+  border-bottom-left-radius: 15px;
+}
+.text {
+  width: 70%;
+  text-align: center;
+  margin-top: 25px;
+}
+
+.container-skills-images {
+  display: flex;
+  flex-direction: row;
+}
+.skills-image {
+  margin: 20px;
+}
+.title-about {
+  font-size: 30px;
+  text-align: center;
+  margin-top: 40px;
+  border-bottom: 3px black solid;
+  padding-bottom: 5px;
+  border-bottom-left-radius: 15px;
+}
+
+/* MODAL WORK 
+============================*/
+.container-work-folder {
+  display: grid;
+  grid-template-columns: repeat(8, 70px);
+  grid-template-rows: repeat(3, 100px);
+  gap: 1rem;
+}
+.work-nav-left {
+  width: 40%;
+  height: 80vh;
+  background-color: rgb(232, 234, 237);
+}
+.item-work1 p,
+.item-work2 p,
+.item-work3 p,
+.item-work1-readme p {
+  color: black;
+  margin: 0;
+  padding: 0;
+  font-weight: 700;
+}
+.item-work1,
+.item-work2,
+.item-work3 {
+  margin-top: 15%;
+  text-align: center;
+}
+
+/* MODAL WORK 
+============================*/
+.modal-work1, .modal-work2 {
+  height: 80%;
+  width: 60%;
+  top: 60px;
+  left: -200px;
+}
+/* MODAL README 
+============================*/
+.modal-readme {
+  height: 70%;
+  width: 60%;
+  top: 160px;
+  left: 450px;
+}
+.container-readme p {
+  padding: 2.5rem;
+}
+a {
+  text-decoration: none;
+}
