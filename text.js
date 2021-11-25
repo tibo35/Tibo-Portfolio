@@ -69,160 +69,71 @@ const triggerArray = Array.from(triggers).entries();
 const reduceArray = Array.from(reduceButtons).entries();
 
 
-  // MODALS Z-INDEX
 
 
 
 
-  // OPEN CLOSE FINDER
-  // ===================================================
 
-  // function toggleFinder () {
-  //   document.getElementById('modal-work').classList.add('nav-lis-visible');
-    
-  // }
-  // modalWork.addEventListener('dblclick', toggleFinder);
-// OPEN AND CLOSE
 
-for (let [i, trigger] of triggerArray) {
-  const toggleModal = () => {
-    modals[i].classList.toggle('show-modal');
+for (let [i, trigger] of triggerArray){
+
+// Open the modal widow
+
+  const showModal = () => {
+    modals[i].classList.add('show-modal');
     modals[i].classList.remove('modal-expand');
   }
-  trigger.addEventListener("dblclick", toggleModal);
-  closeButtons[i].addEventListener("click", toggleModal);
-}
+  trigger.addEventListener('dblclick', showModal);
 
 
-// EXPAND 
 
-for(let [i, expand] of expandArray ) {
+// Close the modal widow
+  const removeModal = () => {
+    modals[i].classList.remove('show-modal');
+
+  }
+  closeButtons[i].addEventListener('click', removeModal);
+  reduceButtons[i].addEventListener('click', removeModal);
+
+
+// Bring modal widow at the front (zindex)
+
+var zIndex =10;
+  const bringFront = () => {
+    
+    modals[i].style.zIndex = zIndex++;
+  }
+  modals[i].addEventListener("click", bringFront);
+  }
+  
+
+
+for(let [i, expand] of expandArray) {
+
+// Expand the modal widow
+
   const expandModal = () => {
     modals[i].classList.toggle('modal-expand');
   }
   expand.addEventListener('click', expandModal);
   expandButtons[i].addEventListener('click', expandModal);
-}
-
-  // REDUCE
-  for(let [i, trigger] of reduceArray ) {
-    const reduceModal = () => {
-      modals[i].classList.toggle('show-modal');
-      modals[i].classList.remove('modal-expand')
-    }
-    trigger.addEventListener('click', reduceModal);
-    reduceButtons[i].addEventListener('click', reduceModal);
-  }
-
-
-// // OPEN MODAL - WORK - WORK1
-const readMe = document.getElementsByClassName('modal-readme');
-
-function toggleReadMe (){
-  modals.classList.toggle('modal-readme');
 
 }
-readMe.addEventListener('dblclick', toggleReadMe);
 
 
 
-
-
-
-
-
-// DRAG
-
-document.querySelectorAll('.modal').forEach((item) => {
-
-  item.addEventListener('mousedown', mousedown);
   
-  function mousedown(e){
-  
-      window.addEventListener('mousemove', mousemove);
-      window.addEventListener('mouseup', mouseup);
-      
-      let prevX = e.clientX; // 2
-      let prevY = e.clientY; // 2
-  
-      function mousemove(e){
-          let newX = prevX - e.clientX; // 2-3 =-1
-          let newY = prevY - e.clientY; // 2 -2 = 0
-  
-          const rect = item.getBoundingClientRect();
-  
-          item.style.left = rect.left - newX + "px"; // 200 - - 1 = 201
-          item.style.top = rect.top - newY + "px";
-  
-          prevX = e.clientX;
-          prevY = e.clientY;
-      }
-  
-      function mouseup(){
-          window.removeEventListener('mousemove', mousemove);
-          window.removeEventListener('mouseup', mouseup);
-      }
-  }
-});
 
 
-// const el = document.querySelector('.drag');
 
-// el.addEventListener('mousedown', mousedown);
+// // // OPEN MODAL - WORK - WORK1
+// const readMe = document.getElementsByClassName('modal-readme');
 
-// function mousedown(e){
+// function toggleReadMe (){
+//   modals.classList.toggle('modal-readme');
 
-//     window.addEventListener('mousemove', mousemove);
-//     window.addEventListener('mouseup', mouseup);
-    
-//     let prevX = e.clientX; // 2
-//     let prevY = e.clientY; // 2
-
-//     function mousemove(e){
-//         let newX = prevX - e.clientX; // 2-3 =-1
-//         let newY = prevY - e.clientY; // 2 -2 = 0
-
-//         const rect = el.getBoundingClientRect();
-
-//         el.style.left = rect.left - newX + "px"; // 200 - - 1 = 201
-//         el.style.top = rect.top - newY + "px";
-
-//         prevX = e.clientX;
-//         prevY = e.clientY;
-//     }
-
-//     function mouseup(){
-//         window.removeEventListener('mousemove', mousemove);
-//         window.removeEventListener('mouseup', mouseup);
-//     }
 // }
-// const el = document.querySelector('.theDiv');
-
-// el.addEventListener('mousemove', mousedown);
-
-// function mousedown(e) {
-//   window.addEventListener('mousemove', mousemove);
-//   window.addEventListener('mouseup', mouseup);
-
-//   let prevX = e.clientX;
-//   let prevY = e.clientY;
-
-//   function mousemove(e){
-//     let newX = prevX - e.clientX;
-//     let newY = prevY - e.clientY;
-
-//     const rect = el.getBoundingClientRect();
-
-//     el.style.left = rect.left - newX + 'px';
-//     el.style.top = rect.top - newY + 'px';
-
-//     prevX = e.clientX;
-//     prevY = e.clientY;
-//   }
-//   function mouseup(){}
-// }
-
-
+// readMe.addEventListener('dblclick', toggleReadMe);
 
 
 

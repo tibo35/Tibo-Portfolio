@@ -1,3 +1,4 @@
+
 document.querySelectorAll('.modal').forEach((item) =>{
 
 item.addEventListener('mousedown', mousedown);
@@ -28,4 +29,5 @@ function mousedown(e){
         window.removeEventListener('mouseup', mouseup);
     }
 }
+
 });
