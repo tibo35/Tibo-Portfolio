@@ -1,6 +1,5 @@
 * {
   box-sizing: border-box;
-
 }
 html {
   overflow: hidden;
@@ -11,8 +10,6 @@ html {
   font-weight: 400;
   src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-regular-webfont.woff");
 }
-
-
 
 body {
   height: 100vh;
@@ -135,28 +132,25 @@ nav {
   flex-direction: column;
   position: absolute;
   background-color: white;
-  height: 80%;
-  width: 70%;
+  height: 50%;
+  width: 50%;
   top: 80px;
   left: 250px;
   border-radius: 15px;
   box-shadow: 1px 1px 35px rgba(0, 0, 0, 0.242);
-  
 }
 
 .show-modal {
   visibility: visible;
-
-  
 }
 
-
 .modal-expand {
-  /* left: 0; */
+  position: absolute;
+  left: 0px;
   visibility: visible;
-  height: 80vh;
-  width: 80vw;
-  /* top: 26px; */
+  height: 100vh;
+  width: 100vw;
+  top: 26px;
 }
 
 .dot-close,
@@ -250,20 +244,29 @@ nav {
 /* MODAL WORK 
 ============================*/
 .modal-work1,
-.modal-work2 {
-  height: 80%;
-  width: 60%;
+.modal-work2,
+.modal-work3 {
+  /* height: 80%;
+  width: 60%; */
+  /* top: 120px;
+  left: 350px; */
+
+  height: 40%;
+  width: 40%;
   top: 120px;
-  left: 350px;
+  left: 250px;
 }
 /* MODAL README 
 ============================*/
-.modal-readme {
+.content-work1 {
   height: 70%;
   width: 50%;
   top: 160px;
   left: 450px;
-
+  
+}
+.container-readme {
+  overflow: scroll;
 }
 .container-readme p {
   padding: 2.5rem;
@@ -271,4 +274,23 @@ nav {
 
 a {
   text-decoration: none;
+}
+
+/* README  - SOBA PROJECT
+============================*/
+
+.container-header {
+  display: flex;
+  flex-direction: row;
+  margin: 3rem;
+  background-color: rgb(232, 232, 232);
+  border-radius: 1rem;
+  padding: 1rem;
+  margin-top: 5rem;
+}
+
+.modal-readme-title {
+  text-align: center;
+  margin-top: 5rem;
+  
 }
