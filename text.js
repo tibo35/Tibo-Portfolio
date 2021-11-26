@@ -37,7 +37,7 @@ var dd = String(today.getDate()).padStart(2, '0');
 var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
 var yyyy = today.getFullYear();
 
-today = mm + '/' + dd + '/' + yyyy;
+today = mm + ' / ' + dd + ' / ' + yyyy;
 document.getElementById("date").innerText = today; 
   }
   currentDate();
@@ -69,19 +69,15 @@ const triggerArray = Array.from(triggers).entries();
 const reduceArray = Array.from(reduceButtons).entries();
 
 
-
-
-
-
-
-
 for (let [i, trigger] of triggerArray){
 
 // Open the modal widow
 
   const showModal = () => {
+   
     modals[i].classList.add('show-modal');
     modals[i].classList.remove('modal-expand');
+
   }
   trigger.addEventListener('dblclick', showModal);
 
@@ -89,6 +85,7 @@ for (let [i, trigger] of triggerArray){
 
 // Close the modal widow
   const removeModal = () => {
+    modals[i].classList.remove('modal-expand');
     modals[i].classList.remove('show-modal');
 
   }
@@ -104,6 +101,9 @@ var zIndex =10;
     modals[i].style.zIndex = zIndex++;
   }
   modals[i].addEventListener("click", bringFront);
+
+  // make sure that the modal window stays at the front when open:
+  trigger.addEventListener('dblclick', bringFront);
   }
   
 
@@ -114,8 +114,9 @@ for(let [i, expand] of expandArray) {
 
   const expandModal = () => {
     modals[i].classList.toggle('modal-expand');
+    
   }
-  expand.addEventListener('click', expandModal);
+  // expand.addEventListener('click', expandModal);
   expandButtons[i].addEventListener('click', expandModal);
 
 }
@@ -124,16 +125,6 @@ for(let [i, expand] of expandArray) {
 
   
 
-
-
-// // // OPEN MODAL - WORK - WORK1
-// const readMe = document.getElementsByClassName('modal-readme');
-
-// function toggleReadMe (){
-//   modals.classList.toggle('modal-readme');
-
-// }
-// readMe.addEventListener('dblclick', toggleReadMe);
 
 
 
