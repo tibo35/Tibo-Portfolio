@@ -124,7 +124,7 @@ nav {
   font-weight: 700;
 }
 
-/* MODALS - ABOUT - SKILLS - WORK
+/* MODALS - 
 ================================= */
 .modal {
   display: flex;
@@ -132,12 +132,14 @@ nav {
   flex-direction: column;
   position: absolute;
   background-color: white;
-  height: 50%;
-  width: 50%;
-  top: 80px;
-  left: 250px;
+  height: 800px;
+  width: 1000px;
+  /* top: 80px;
+  left: 250px; */
   border-radius: 15px;
   box-shadow: 1px 1px 35px rgba(0, 0, 0, 0.242);
+  /* min-width: 800px;
+  min-height: 600px; */
 }
 
 .show-modal {
@@ -146,11 +148,11 @@ nav {
 
 .modal-expand {
   position: absolute;
-  left: 0px;
+  left: 0px !important;
   visibility: visible;
   height: 100vh;
   width: 100vw;
-  top: 26px;
+  top: 26px !important;
 }
 
 .dot-close,
@@ -180,8 +182,20 @@ nav {
   background-color: rgb(232, 234, 237);
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
+  position: sticky;
+  top: 0;
 }
 
+/*  SKILLS 
+================================ */
+.modal-skills {
+  height: 70vh;
+  width: 60vw;
+  top: 80px;
+  left: 250px;
+  min-width: 1000px;
+  min-height: 700px;
+}
 .title-skills {
   font-size: 35px;
   text-align: center;
@@ -190,12 +204,6 @@ nav {
   padding-bottom: 10px;
   border-bottom-left-radius: 15px;
 }
-.text {
-  width: 70%;
-  text-align: center;
-  margin-top: 25px;
-}
-
 .container-skills-images {
   display: flex;
   flex-direction: row;
@@ -203,7 +211,21 @@ nav {
 .skills-image {
   margin: 20px;
 }
+
+/*  ABOUT 
+================================ */
+.modal-about {
+  height: 70vh;
+  width: 60vw;
+  top: 100px;
+  left: 500px;
+  min-width: 1000px;
+  min-height: 700px;
+}
 .title-about {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
   font-size: 30px;
   text-align: center;
   margin-top: 40px;
@@ -211,9 +233,33 @@ nav {
   padding-bottom: 5px;
   border-bottom-left-radius: 15px;
 }
+.intro-about {
+  display: flex;
+  flex-direction: row;
+  text-align: left;
+  width: 80%;
+  align-items: center;
+}
+.text-about {
+  margin: 0 5rem 0 5rem;
+  font-size: 1.5rem;
+  padding: 2rem 10rem 2rem 10rem;
+  text-align: left;
+}
+.intro-about h1 {
+  margin: 7rem;
+}
 
 /* MODAL WORK 
 ============================*/
+.modal-work {
+  height: 70vh;
+  width: 60vw;
+  top: 80px;
+  left: 500px;
+  min-width: 1000px;
+  min-height: 700px;
+}
 .container-work-folder {
   display: grid;
   grid-template-columns: repeat(8, 70px);
@@ -263,7 +309,6 @@ nav {
   width: 50%;
   top: 160px;
   left: 450px;
-  
 }
 .container-readme {
   overflow: scroll;
@@ -292,5 +337,50 @@ a {
 .modal-readme-title {
   text-align: center;
   margin-top: 5rem;
-  
+}
+
+/* RESIZER  ==================*/
+.resizable {
+  background: white;
+  box-shadow: 1px 1px 35px rgba(0, 0, 0, 0.242);
+  position: absolute;
+  scrollbar-width: none; /* for Firefox */
+  overflow-y: scroll;
+
+}
+.resizable::-webkit-scrollbar {
+  display: none; /* for Chrome, Safari, and Opera */
+}
+
+.resizers {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.resizer {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+}
+
+.nw {
+  left: -1px;
+  top: -1px;
+  cursor: nw-resize; /*resizer cursor*/
+}
+.ne {
+  right: -1px;
+  top: -1px;
+  cursor: ne-resize;
+}
+.sw {
+  left: -1px;
+  bottom: -1px;
+  cursor: sw-resize;
+}
+.se {
+  right: -1px;
+  bottom: -1px;
+  cursor: se-resize;
 }

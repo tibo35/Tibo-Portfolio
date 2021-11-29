@@ -1,6 +1,6 @@
 
-// TIME
-// ===================================================
+
+// ===========================  TIME  ========================
 function currentTime() {
     let date = new Date(); 
     let hh = date.getHours();
@@ -28,8 +28,8 @@ function currentTime() {
   currentTime();
 
 
-  // DATE
-  // ===================================================
+   
+  // ============================ DATE  =======================
 
   function currentDate() {
 var today = new Date();
@@ -101,7 +101,10 @@ var zIndex =10;
     modals[i].style.zIndex = zIndex++;
   }
   modals[i].addEventListener("click", bringFront);
+
   modals[i].addEventListener("mousedown", bringFront);
+
+
   // make sure that the modal window stays at the front when open:
   trigger.addEventListener('dblclick', bringFront);
   }
@@ -123,6 +126,105 @@ for(let [i, expand] of expandArray) {
 
 
 
+// ============================ RESIZE AND DRAG =============================
+
+
+// DRAG =========
+
+
+
+let isResizing;
+
+document.querySelectorAll('.resizable').forEach((resizable) => {
+// const el = document.querySelector(".resizable");
+isResizing = false;
+
+resizable.addEventListener("mousedown", mousedown);
+
+function mousedown(e) {
+  window.addEventListener("mousemove", mousemove);
+  window.addEventListener("mouseup", mouseup);
+
+  let prevX = e.clientX;
+  let prevY = e.clientY;
+
+  function mousemove(e) {
+    if (!isResizing) {
+      let newX = prevX - e.clientX;
+      let newY = prevY - e.clientY;
+
+      const rect = resizable.getBoundingClientRect();
+
+      resizable.style.left = rect.left - newX + "px";
+      resizable.style.top = rect.top - newY + "px";
+
+      prevX = e.clientX;
+      prevY = e.clientY;
+    }
+  }
+
+  function mouseup() {
+    window.removeEventListener("mousemove", mousemove);
+    window.removeEventListener("mouseup", mouseup);
+  }
+}
+
+
+
+// RESIZE =========
+
+
+const resizers = document.querySelectorAll(".resizer");
+
+let currentResizer;
+
+for (let resizer of resizers) {
+  resizer.addEventListener("mousedown", mousedown);
+
+  function mousedown(e) {
+    currentResizer = e.target;
+    isResizing = true;
+
+    let prevX = e.clientX;
+    let prevY = e.clientY;
+
+    window.addEventListener("mousemove", mousemove);
+    window.addEventListener("mouseup", mouseup);
+
+    function mousemove(e) {
+      const rect = resizable.getBoundingClientRect();
+
+      if (currentResizer.classList.contains("se")) {
+        resizable.style.width = rect.width - (prevX - e.clientX) + "px";
+        resizable.style.height = rect.height - (prevY - e.clientY) + "px";
+      } else if (currentResizer.classList.contains("sw")) {
+        resizable.style.width = rect.width + (prevX - e.clientX) + "px";
+        resizable.style.height = rect.height - (prevY - e.clientY) + "px";
+        resizable.style.left = rect.left - (prevX - e.clientX) + "px";
+      } else if (currentResizer.classList.contains("ne")) {
+        resizable.style.width = rect.width - (prevX - e.clientX) + "px";
+        resizable.style.height = rect.height + (prevY - e.clientY) + "px";
+        resizable.style.top = rect.top - (prevY - e.clientY) + "px";
+      } else {
+        resizable.style.width = rect.width + (prevX - e.clientX) + "px";
+        resizable.style.height = rect.height + (prevY - e.clientY) + "px";
+        resizable.style.top = rect.top - (prevY - e.clientY) + "px";
+        resizable.style.left = rect.left - (prevX - e.clientX) + "px";
+      }
+
+      prevX = e.clientX;
+      prevY = e.clientY;
+    }
+
+    function mouseup() {
+      window.removeEventListener("mousemove", mousemove);
+      window.removeEventListener("mouseup", mouseup);
+      isResizing = false;
+    }
+  }
+}
+
+});
   
 
 
