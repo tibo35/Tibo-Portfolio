@@ -150,9 +150,9 @@ nav {
   position: absolute;
   left: 0px !important;
   visibility: visible;
-  height: 100vh;
   width: 100vw;
   top: 26px !important;
+  overflow: auto;
 }
 
 .dot-close,
@@ -196,21 +196,39 @@ nav {
   min-width: 900px;
   min-height: 500px;
 }
-.title-skills {
+/* .title-skills {
   font-size: 35px;
   text-align: center;
-  margin-top: 40px;
-  border-bottom: 3px black solid;
-  padding-bottom: 10px;
-  border-bottom-left-radius: 15px;
+  
+} */
+.container-skills-imgages {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  
+ 
 }
-.container-skills-images {
+.images-row1, .images-row2 {
   display: flex;
   flex-direction: row;
+  justify-content: center;
+  
 }
 .skills-image {
   margin: 20px;
+  text-align: center;
+ border-radius: 20%;
+  box-shadow: 1px 1px 35px rgba(0, 0, 0, 0.242);
+  border: 2px solid rgb(223, 201, 160)
 }
+.content-skills {
+  background-color: rgb(230, 217, 193);
+ height: 100%;
+ overflow: none;
+}
+
 
 /*  ABOUT 
 ================================ */
@@ -256,7 +274,8 @@ nav {
 .intro-about h1 span {
   background-color: black;
   color: white;
-  font-size: 2.5rem;
+  font-size: 2rem;
+  font-family: consolas, "Liberation Mono", courier, monospace;
 }
 .text-about span {
   /* font-size: 2rem; */
@@ -278,7 +297,8 @@ nav {
   display: grid;
   grid-template-columns: repeat(8, 70px);
   grid-template-rows: repeat(3, 100px);
-  gap: 1rem;
+  gap: 2rem;
+  margin: 20px;
 }
 .work-nav-left {
   width: 40%;
@@ -318,14 +338,10 @@ nav {
 }
 /* MODAL README 
 ============================*/
-.content-work1 {
-  height: 70%;
-  width: 50%;
-  top: 160px;
-  left: 450px;
-}
+
 .container-readme {
   overflow: scroll;
+  
 }
 .container-readme p {
   padding: 2.5rem;
@@ -337,20 +353,35 @@ a {
 
 /* README  - SOBA PROJECT
 ============================*/
+.container-soba {
+  top: 160px;
+  left: 450px;
 
-.container-header {
+}
+.content-soba {
+  background-color: black;
+  color: white;
+  display: flex;
+  flex-direction: column;
+}
+.content-soba-box1 {
   display: flex;
   flex-direction: row;
-  margin: 3rem;
-  background-color: rgb(232, 232, 232);
-  border-radius: 1rem;
-  padding: 1rem;
-  margin-top: 5rem;
-}
+justify-content: space-evenly;
+  margin: 2rem;
 
-.modal-readme-title {
+}
+.soba-title {
+  font-size: 3rem;
+  font-family: consolas, "Liberation Mono", courier, monospace;
+  margin: 0;
+  padding: 5rem;
   text-align: center;
-  margin-top: 5rem;
+  background-color: rgb(230, 217, 193);
+}
+.soba-title span {
+  background-color: white;
+  color: gray;
 }
 
 /* RESIZER  ==================*/
@@ -360,7 +391,7 @@ a {
   box-shadow: 1px 1px 35px rgba(0, 0, 0, 0.242);
   position: absolute;
   scrollbar-width: none;
-  overflow-y: scroll;
+  overflow: scroll;
   resize: both;
 }
 .resizable::-webkit-scrollbar {

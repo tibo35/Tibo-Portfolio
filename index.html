@@ -136,16 +136,20 @@
                 </div>
                 <p>Skills</p>
             </div>
-
-            <div class=container-skills>
-                <h1 class="title-skills">My Stack</h1>
-                <img class="skills-image"height="100" width="250" src="ressources/html css js.png" alt="">
-                <h1 class="title-skills">My Tools</h1>
-
+            <div class='content-skills'>
                 <div class="container-skills-imgages">
-                    <img class="skills-image"heigth="30" width="170"src="ressources/codepen_logo_icon_169360.png" alt="">
-                    <img class="skills-image"heigth="50" width="85"src="ressources/github.png" alt="">
-                    <img class="skills-image"height="85" width="170"src="ressources/stackoverflow.png" alt="">
+                    <div class="images-row1">
+                        <img class="skills-image"heigth="30" width="170"src="ressources/css.png" alt="">
+                        <img class="skills-image"heigth="30" width="170"src="ressources/html.png" alt="">
+                        <img class="skills-image"heigth="30" width="170"src="ressources/js.png" alt="">
+                        <img class="skills-image"heigth="30" width="170"src="ressources/jquery.png" alt="">
+                    </div>
+                        <div class='images-row2'>
+                            <img class="skills-image"heigth="30" width="170"src="ressources/stackoverflow.png" alt="">
+                            <img class="skills-image"heigth="30" width="170"src="ressources/git.png" alt="">
+                            <img class="skills-image"heigth="30" width="170"src="ressources/github.png" alt="">
+                            <img class="skills-image"heigth="30" width="170"src="ressources/codepen_logo_icon_169360.png" alt="">
+                        </div>
                 </div>
             </div>
         </div>
@@ -192,26 +196,28 @@
 </section>
 <!-- ========================   MODAL - WORK 1 - CONTAINER   ======================= -->
 
-<section class="modal-work1 modal">
-    <div class="modal-nav">
-        <div class="buttons-window">
-            <span class="dot-close"></span>
-            <span class="dot-reduce"></span>
-            <span class="dot-open"></span>
- 
-        </div>
-        
-        <p>Soba</p>
-    </div> 
-    <div class="container-work-folder">
-        <div class="item-work1 item-work1">
-            <a href="https://github.com/tibo35/Soba-Restaurant">
-            <img width="50" height="50" src="ressources/GitHub-Mark-32px.png" alt="">
-            <p>GitHub Code</p></a>
-        </div>
-        <div class="item-work1 trigger">
-            <img class="desktop-btn"width="50" height="50" src="ressources/pngegg.png" alt="">
-            <p>Readme</p>
+<section class="modal-work1">
+    <div class='resizable modal modal-work1'>
+        <div class="modal-nav">
+            <div class="buttons-window">
+                <span class="dot-close"></span>
+                <span class="dot-reduce"></span>
+                <span class="dot-open"></span>
+    
+            </div>
+            
+            <p>Soba</p>
+        </div> 
+        <div class="container-work-folder">
+            <div class="item-work1 item-work1">
+                <a href="https://github.com/tibo35/Soba-Restaurant">
+                <img width="50" height="50" src="ressources/GitHub-Mark-32px.png" alt="">
+                <p>GitHub Code</p></a>
+            </div>
+            <div class="item-work1 trigger">
+                <img class="desktop-btn"width="50" height="50" src="ressources/pngegg.png" alt="">
+                <p>Readme</p>
+            </div>
         </div>
     </div>
 </section>
@@ -278,32 +284,32 @@
 <!-- ========================   READ ME - WORK 1    ======================= -->
 
 
-<section class="modal-readme modal content-work1">
-    <div class="modal-nav">
-        <div class="buttons-window">
-            <span class="dot-close"></span>
-            <span class="dot-reduce"></span>
-            <span class="dot-open"></span>
-    
-        </div>
-        <p>Readme</p>
-    </div> 
-    <div class="container-readme ">
-        <h1 class='modal-readme-title'>SOBA PROJECT</h1>
-        <div class='container-header'>
-            <div>
-            <h2>Technologies that I used for this project</h2>
-            <ul>
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>JAVASCRIPT</li>
-                <li>RESPONSIVE DESIGN</li>
-
-            </ul>
+<section class="modal-readme">
+    <div class='resizable modal container-soba'>
+        <div class="modal-nav">
+            <div class="buttons-window">
+                <span class="dot-close"></span>
+                <span class="dot-reduce"></span>
+                <span class="dot-open"></span>
+        
             </div>
-                <img width='50%'src="ressources/project soba/responsive image.png" alt="">
-        </div>
-        <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid sunt architecto illum a. Et, perspiciatis eveniet veritatis repellendus laboriosam numquam minima saepe impedit, qui quae tempora eligendi molestias ipsam voluptas. </p>
+            <p>Readme</p>
+        </div> 
+        <div class="content-soba ">
+            <h1 class='soba-title'><span>< SOBA-PROJECT ></span></h1>
+                <div class='content-soba-box1'>
+                    <img width='70%'src="ressources/project soba/responsive image.png" alt="">
+                    <a href="https://tibo35.github.io/Soba-Restaurant/">WEBSITE</a>
+                </div>
+                    <h2>Technologies that I used for this project</h2>
+                        <ul>
+                            <li>HTML</li>
+                            <li>CSS</li>
+                            <li>JAVASCRIPT</li>
+                            <li>RESPONSIVE DESIGN</li>
+
+                        </ul>
+                            <p> Lorem idgserjkg kse bg kse kbjsen kbnsekjgbknabnaejrane klbnvlaen bvl aelk vFLnwLNln bpsum dolor sit amet consectetur adipisicing elit. Aliquid sunt architecto illum a. Et, perspiciatis eveniet veritatis repellendus laboriosam numquam minima saepe impedit, qui quae tempora eligendi molestias ipsam voluptas. </p>
         </div>
     </div>
 </section>
@@ -330,7 +336,7 @@
 </section>
 </main>
 <script src='text.js'></script>
-
+<!-- <script src='brouillon.js'></script> -->
 
 </body>
 </html>
