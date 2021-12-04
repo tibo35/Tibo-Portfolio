@@ -1,5 +1,6 @@
 * {
   box-sizing: border-box;
+  user-select: none;
 }
 html {
   overflow: hidden;
@@ -73,20 +74,14 @@ nav {
   grid-template-rows: repeat(6, 100px);
   gap: 1rem;
 }
-.container-about,
-.container-work,
-.container-skills,
-.container-linkedin {
+.container-desktop {
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
   overflow-y: auto;
 }
-.items-about:active,
-.items-work:active,
-.items-skills:active,
-.items-linkedin:active {
+.items-desktop:active {
   background-color: rgb(0, 99, 225);
 }
 
@@ -102,27 +97,28 @@ nav {
   grid-column: 2/3;
   grid-row: 2/3;
 }
+.-mail{
+  grid-column: 2/3;
+  grid-row: 4/4;
+}
 
 .-linkedin {
   grid-column: 2/3;
-  grid-row: 6/7;
+  grid-row: 5/6;
 }
-.items-work img,
-.items-about img,
-.items-skills img,
-.item-linkedin img {
+.items-desktop img {
   margin: 0;
   padding: 0;
 }
-.items-work p,
-.items-about p,
-.items-skills p,
-.items-linkedin p {
+.items-desktop p {
   color: white;
   margin: 0;
   padding: 0;
   font-weight: 700;
 }
+
+
+
 
 /* MODALS - 
 ================================= */
@@ -133,11 +129,12 @@ nav {
   position: absolute;
   background-color: white;
   height: 600px;
-  width: 800px;
+  width: 600px;
   /* top: 80px;
   left: 250px; */
   border-radius: 15px;
-  box-shadow: 1px 1px 35px rgba(0, 0, 0, 0.242);
+  box-shadow: 3px 3px 35px rgba(2, 2, 2, 5.442);
+  border:rgb(232, 234, 245);
   /* min-width: 800px;
   min-height: 600px; */
 }
@@ -150,9 +147,10 @@ nav {
   position: absolute;
   left: 0px !important;
   visibility: visible;
-  height: 100vh;
   width: 100vw;
+  height: 100vh;
   top: 26px !important;
+  overflow:scroll;
 }
 
 .dot-close,
@@ -184,41 +182,66 @@ nav {
   border-top-right-radius: 15px;
   position: sticky;
   top: 0;
+  text-align: center;
 }
+.buttons-window a {
+  line-height: 10px;
+  vertical-align: 50%;
+  font-size: 0.9rem;
+  visibility: hidden;
+}
+.buttons-window:hover a{
+  visibility: visible;
+}
+
 
 /*  SKILLS 
 ================================ */
 .modal-skills {
-  /* height: 70vh;
-  width: 60vw; */
-  top: 80px;
-  left: 250px;
+  top: 70px;
+  left: 350px;
   min-width: 900px;
   min-height: 500px;
-}
-.title-skills {
+} 
+/* .title-skills {
   font-size: 35px;
   text-align: center;
-  margin-top: 40px;
-  border-bottom: 3px black solid;
-  padding-bottom: 10px;
-  border-bottom-left-radius: 15px;
+  
+} */
+.container-skills-imgages {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  
+ 
 }
-.container-skills-images {
+.images-row1, .images-row2 {
   display: flex;
   flex-direction: row;
+  justify-content: center;
+  
 }
 .skills-image {
   margin: 20px;
+  text-align: center;
+ border-radius: 20%;
+  box-shadow: 1px 1px 35px rgba(0, 0, 0, 0.242);
+  border: 2px solid rgb(223, 201, 160)
 }
+.content-skills {
+  background-color: rgb(230, 217, 193);
+ height: 100%;
+ overflow: none;
+}
+
 
 /*  ABOUT 
 ================================ */
-.modal-about {
-  /* height: 70vh;
-  width: 60vw; */
+.modal-box {
   top: 100px;
-  left: 500px;
+  left: 300px;
   min-width: 900px;
   min-height: 500px;
 }
@@ -256,7 +279,8 @@ nav {
 .intro-about h1 span {
   background-color: black;
   color: white;
-  font-size: 2.5rem;
+  font-size: 2rem;
+  font-family: consolas, "Liberation Mono", courier, monospace;
 }
 .text-about span {
   /* font-size: 2rem; */
@@ -266,19 +290,13 @@ nav {
 }
 /* MODAL WORK 
 ============================*/
-.modal-work {
-  height: 70vh;
-  width: 60vw;
-  top: 80px;
-  left: 500px;
-  min-width: 1000px;
-  min-height: 700px;
-}
+
 .container-work-folder {
   display: grid;
   grid-template-columns: repeat(8, 70px);
   grid-template-rows: repeat(3, 100px);
-  gap: 1rem;
+  gap: 2rem;
+  margin: 20px;
 }
 .work-nav-left {
   width: 40%;
@@ -303,29 +321,19 @@ nav {
 
 /* MODAL WORK 
 ============================*/
-.modal-work1,
-.modal-work2,
-.modal-work3 {
-  /* height: 80%;
-  width: 60%; */
-  /* top: 120px;
-  left: 350px; */
-
-  height: 40%;
-  width: 40%;
+.modal-work{
+  min-width: 900px;
+  min-height: 500px;
   top: 120px;
   left: 250px;
 }
+
 /* MODAL README 
 ============================*/
-.content-work1 {
-  height: 70%;
-  width: 50%;
-  top: 160px;
-  left: 450px;
-}
+
 .container-readme {
   overflow: scroll;
+  
 }
 .container-readme p {
   padding: 2.5rem;
@@ -338,30 +346,74 @@ a {
 /* README  - SOBA PROJECT
 ============================*/
 
-.container-header {
+.content-soba {
+  background-color: black;
+  color: white;
+  display: flex;
+  flex-direction: column;
+}
+.content-soba-box1 {
   display: flex;
   flex-direction: row;
-  margin: 3rem;
-  background-color: rgb(232, 232, 232);
-  border-radius: 1rem;
-  padding: 1rem;
-  margin-top: 5rem;
+justify-content: space-evenly;
+  margin: 2rem;
+  align-items: center;
 }
-
-.modal-readme-title {
+.content-soba-box1 img {
+  border-radius: 0.5rem;
+}
+.website-link{
+  color: white;
+  font-size: 2rem;
+  border: white 1px solid;
+  padding: 1rem;
+  border-radius: 1rem;
+}
+.website-link:hover{
+  background-color: rgb(230, 217, 193);
+}
+.soba-title {
+  font-size: 3rem;
+  font-family: consolas, "Liberation Mono", courier, monospace;
+  margin: 0;
+  padding: 5rem;
   text-align: center;
-  margin-top: 5rem;
+  background-color: rgb(230, 217, 193);
+}
+.soba-title span {
+  background-color: white;
+  color: gray;
+}
+.content-soba-box2{
+  display: flex;
+  flex-direction: row;
+  /* padding: 5% 10% 5% 10%; */
+  justify-content: center;
+  border: blue 1px solid;
+}
+.features, .technologies {
+  justify-content: center;
+  border: red 1px solid;
+display: flex;
+flex-direction: row;
+
+}
+.content-soba-box2 ul {
+display: flex;
+flex-direction: row;
+  list-style: none;
 }
 
 /* RESIZER  ==================*/
 
 .resizable {
   background: white;
-  box-shadow: 1px 1px 35px rgba(0, 0, 0, 0.242);
+  box-shadow: 2px 2px 35px rgba(0, 1, 1, .442);
   position: absolute;
   scrollbar-width: none;
-  overflow-y: scroll;
+  overflow: scroll;
   resize: both;
+  border:rgb(134, 132, 132) 0.5px solid;
 }
 .resizable::-webkit-scrollbar {
   display: none;

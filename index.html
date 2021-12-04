@@ -43,30 +43,34 @@
 <main>
 
 <section class="files-containers">
-    <div class="container-about -about">
-        <div class="items-about trigger">
+    <div class="container-desktop -about">
+        <div class="items-desktop trigger">
             <img class="desktop-btn"width="60" height="60" src="ressources/pngegg.png" alt="">
             <p class="desktop-btn">About Me</p>
         </div>
     </div>  
-     <div class="container-skills -skills">
-        <div class="items-skills trigger">
+     <div class="container-desktop -skills">
+        <div class="items-desktop trigger">
             <img width="60" height="60" src="ressources/pngegg.png" alt="">
             <p>My skills</p>
         </div>
     </div>
-    <div class="container-work -work">
-        <div class="items-work trigger">  
+    <div class="container-desktop -work">
+        <div class="items-desktop trigger">  
             <img width="60" height="60" src="ressources/folder.png" alt="">
             <p>My work</p> 
         </div>
- 
     </div>
- 
-    <div class="container-linkedin -linkedin"><a href="http://www.linkedin.com/in/thibaud-aptel">
-        <div class="items-linkedin">
+    <div class="container-desktop -linkedin"><a href="http://www.linkedin.com/in/thibaud-aptel">
+        <div class="items-desktop">
             <img width="60" height="60" src="ressources/icons8-linkedin-48.png" alt="">
             <p>My linkedIn</p></a>
+        </div>
+    </div>
+    <div class="container-desktop -mail">
+        <div class="items-desktop">
+            <img width="60" height="60" src="ressources/email.png" alt="">
+            <p>contact me</p>
         </div>
     </div>
 </section>
@@ -74,9 +78,9 @@
 
 <!-- MODAL ABOUT 
 ======================================= -->
-<section class="modal-about" >
+<section class="modal-box" >
 
-<div class='resizable modal modal-about'>
+<div class='resizable modal modal-box'>
     <div class='resizers'> 
          
       <div class='resizer nw'></div>
@@ -86,9 +90,9 @@
       
         <div class="modal-nav"id='mydiv'>
             <div class="buttons-window">
-                <span class="dot-close"></span>
-                <span class="dot-reduce"></span>
-                <span class="dot-open"></span>
+                <span class="dot-close"><a href="#">x</a></span>
+                <span class="dot-reduce"><a href="#">-</a></span>
+                <span class="dot-open"><a href="#">+</a></span>
             </div>
                 <p>About Me</p>
         </div>
@@ -118,7 +122,7 @@
 <!-- MODAL SKILLS 
 ======================================= -->
 
-<section class="modal-skills">
+<section class="modal-box">
 
     <div class='resizable modal modal-skills'>
         <div class='resizers'> 
@@ -136,16 +140,20 @@
                 </div>
                 <p>Skills</p>
             </div>
-
-            <div class=container-skills>
-                <h1 class="title-skills">My Stack</h1>
-                <img class="skills-image"height="100" width="250" src="ressources/html css js.png" alt="">
-                <h1 class="title-skills">My Tools</h1>
-
+            <div class='content-skills'>
                 <div class="container-skills-imgages">
-                    <img class="skills-image"heigth="30" width="170"src="ressources/codepen_logo_icon_169360.png" alt="">
-                    <img class="skills-image"heigth="50" width="85"src="ressources/github.png" alt="">
-                    <img class="skills-image"height="85" width="170"src="ressources/stackoverflow.png" alt="">
+                    <div class="images-row1">
+                        <img class="skills-image" width="15%" src="ressources/css.png" alt="">
+                        <img class="skills-image"width="15%"src="ressources/html.png" alt="">
+                        <img class="skills-image"width="15%"src="ressources/js.png" alt="">
+                        <img class="skills-image"width="15%"src="ressources/jquery.png" alt="">
+                    </div>
+                        <div class='images-row2'>
+                            <img class="skills-image"width="15%"src="ressources/stackoverflow.png" alt="">
+                            <img class="skills-image"width="15%"width="170"src="ressources/git.png" alt="">
+                            <img class="skills-image"width="15%" width="170"src="ressources/github.png" alt="">
+                            <img class="skills-image"width="15%" width="170"src="ressources/codepen_logo_icon_169360.png" alt="">
+                        </div>
                 </div>
             </div>
         </div>
@@ -155,7 +163,7 @@
 <!-- MODAL WORK 
 ======================================= -->
 
-<section class="modal-work">
+<section class="modal-box">
     <div class='resizable modal modal-work'>
         <div class='resizers'> 
              
@@ -192,26 +200,28 @@
 </section>
 <!-- ========================   MODAL - WORK 1 - CONTAINER   ======================= -->
 
-<section class="modal-work1 modal">
-    <div class="modal-nav">
-        <div class="buttons-window">
-            <span class="dot-close"></span>
-            <span class="dot-reduce"></span>
-            <span class="dot-open"></span>
- 
-        </div>
-        
-        <p>Soba</p>
-    </div> 
-    <div class="container-work-folder">
-        <div class="item-work1 item-work1">
-            <a href="https://github.com/tibo35/Soba-Restaurant">
-            <img width="50" height="50" src="ressources/GitHub-Mark-32px.png" alt="">
-            <p>GitHub Code</p></a>
-        </div>
-        <div class="item-work1 trigger">
-            <img class="desktop-btn"width="50" height="50" src="ressources/pngegg.png" alt="">
-            <p>Readme</p>
+<section class="modal-box">
+    <div class='resizable modal modal-box'>
+        <div class="modal-nav">
+            <div class="buttons-window">
+                <span class="dot-close"></span>
+                <span class="dot-reduce"></span>
+                <span class="dot-open"></span>
+    
+            </div>
+            
+            <p>Soba</p>
+        </div> 
+        <div class="container-work-folder">
+            <div class="item-work1 item-work1">
+                <a href="https://github.com/tibo35/Soba-Restaurant">
+                <img width="50" height="50" src="ressources/GitHub-Mark-32px.png" alt="">
+                <p>GitHub Code</p></a>
+            </div>
+            <div class="item-work1 trigger">
+                <img class="desktop-btn"width="50" height="50" src="ressources/pngegg.png" alt="">
+                <p>Readme</p>
+            </div>
         </div>
     </div>
 </section>
@@ -220,7 +230,7 @@
 <!-- ========================   MODAL- WORK 2 - CONTAINER     ======================= -->
 
 
-    <section class="modal-work2 modal">
+    <section class="modal-box modal">
         <div class="modal-nav">
             <div class="buttons-window">
                 <span class="dot-close"></span>
@@ -248,7 +258,7 @@
 <!-- ========================   MODAL - WORK 3- CONTAINER      ======================= -->
 
 
-<section class="modal-work3 modal">
+<section class="modal-box modal">
     <div class="modal-nav">
         <div class="buttons-window">
             <span class="dot-close"></span>
@@ -278,32 +288,44 @@
 <!-- ========================   READ ME - WORK 1    ======================= -->
 
 
-<section class="modal-readme modal content-work1">
-    <div class="modal-nav">
-        <div class="buttons-window">
-            <span class="dot-close"></span>
-            <span class="dot-reduce"></span>
-            <span class="dot-open"></span>
-    
-        </div>
-        <p>Readme</p>
-    </div> 
-    <div class="container-readme ">
-        <h1 class='modal-readme-title'>SOBA PROJECT</h1>
-        <div class='container-header'>
-            <div>
-            <h2>Technologies that I used for this project</h2>
-            <ul>
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>JAVASCRIPT</li>
-                <li>RESPONSIVE DESIGN</li>
-
-            </ul>
+<section class="modal-box">
+    <div class='resizable modal modal-box'>
+        <div class="modal-nav">
+            <div class="buttons-window">
+                <span class="dot-close"></span>
+                <span class="dot-reduce"></span>
+                <span class="dot-open"></span>
+        
             </div>
-                <img width='50%'src="ressources/project soba/responsive image.png" alt="">
-        </div>
-        <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid sunt architecto illum a. Et, perspiciatis eveniet veritatis repellendus laboriosam numquam minima saepe impedit, qui quae tempora eligendi molestias ipsam voluptas. </p>
+            <p>Readme</p>
+        </div> 
+        <div class="content-soba ">
+            <h1 class='soba-title'><span>< SOBA-PROJECT ></span></h1>
+                <div class='content-soba-box1'>
+                    <img width='50%'src="ressources/project soba/responsive image.png" alt="">
+                    <a class="website-link"href="https://tibo35.github.io/Soba-Restaurant/">WEBSITE LINK</a>
+                </div>
+                <div class='content-soba-box2'>
+                    <div class="technologies">
+                    <h2>MADE WITH</h2>
+                    <h2>Features</h2>
+                        
+                    </div>
+                    <div class="features">
+                            <ul>
+                                <li>Responsive Design</li>
+                                <li>CSS animations</li>
+                                <li>JAVASCRIPT</li>
+                            </ul>
+                            <ul>
+                            <li><img class="soba-image" width="10%" src="ressources/css.png" alt=""></li>
+                            <li><img class="soba-image"width="10%"src="ressources/html.png" alt=""></li>
+                            <li><img class="soba-image"width="10%"src="ressources/js.png" alt=""></li>
+                        </ul>
+                    </div>
+                </div>
+                     <p> Lorem idgserjkg kse bg kse kbjsen kbnsekjgbknabnaejrane klbnvlaen bvl aelk vFLnwLNln bpsum dolor sit amet consectetur adipisicing elit. Aliquid sunt architecto illum a. Et, perspiciatis eveniet veritatis repellendus laboriosam numquam minima saepe impedit, qui quae tempora eligendi molestias ipsam voluptas. </p>
+                
         </div>
     </div>
 </section>
@@ -312,7 +334,7 @@
 <!-- ========================   READ ME - WORK 2    ======================= -->
 
 
-<section class="modal-readme modal">
+<section class="modal-box modal">
     <div class="modal-nav">
         <div class="buttons-window">
             <span class="dot-close"></span>
@@ -330,7 +352,7 @@
 </section>
 </main>
 <script src='text.js'></script>
-
+<!-- <script src='brouillon.js'></script> -->
 
 </body>
 </html>
