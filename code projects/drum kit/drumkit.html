@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Drum Kit</title>
+    <link rel="stylesheet" href="/Users/umut/Documents/code projects/drum kit/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+</head>
+<body>
+    <img src="/Users/umut/Documents/code projects/drum kit/ressources/8b6048994107944c8fc6929cda642c36.png">
+
+    <h1>
+        <div class="banner">
+        The Drum Kit</h1></div>
+       
+</body>
+<div class="keys">
+    <div data-key="65" class="key">
+        <kbd>A</kbd>
+        <span class="sound">Boom</span>
+    </div>
+    <div data-key="83" class="key">
+        <kbd>S</kbd>
+        <span class="sound">Clap</span>
+    </div>
+    <div data-key="68" class="key">
+        <kbd>D</kbd>
+        <span class="sound">hihat</span>
+    </div>
+    <div data-key="70" class="key">
+        <kbd>F</kbd>
+        <span class="sound">kick</span>
+    </div>
+    <div data-key="71" class="key">
+        <kbd>G</kbd>
+        <span class="sound">openhat</span>
+    </div>
+</div>
+
+<audio data-key="65" src="/Users/umut/Documents/code projects/drum kit/ressources/sounds/boom.wav"></audio>
+<audio data-key="83" src="/Users/umut/Documents/code projects/drum kit/ressources/sounds/clap.wav"></audio>
+<audio data-key="68" src="/Users/umut/Documents/code projects/drum kit/ressources/sounds/hihat.wav"></audio>
+<audio data-key="70" src="/Users/umut/Documents/code projects/drum kit/ressources/sounds/kick.wav"></audio>
+<audio data-key="71" src="/Users/umut/Documents/code projects/drum kit/ressources/sounds/openhat.wav"></audio> 
+
+<script>
+window.addEventListener('keydown', function (e){
+const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`)
+const key = document.querySelector(`key[data-key="${e.keyCode}"]`)
+
+if(!audio) return;
+audio.currentTime = 0;
+audio.play();
+key.classList.add('playing');
+})
+</script>
+
+</body>
+
+</html>

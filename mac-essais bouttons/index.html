@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thibaud Aptel</title>
+    <link rel="stylesheet" href="/Users/umut/Documents/CODE/mac-essais bouttons/styles.css">
+</head>
+
+
+<body>
+<header>
+    <nav>
+        <ul class="nav-left">
+            <li><img class="apple-logo"src="/Users/umut/Documents/CODE/Mac-essais bouttons/ressources/apple-black-logo.png" height="17" width="17"alt=""></li>
+            <li class="finder">Finder</li>
+            <li>File</li>
+            <li>Edit</li>
+            <li>Selection</li>
+            <li>View</li>
+            <li>Go</li>
+            <li>Run</li>
+            <li>Terminal</li>
+            <li>Window</li>
+            <li>Help</li>
+        </ul>
+        <ul class="nav-right">
+            <li><img src="/Users/umut/Documents/CODE/Mac-essais bouttons/ressources/bluetooth.png" height="16" width="16"alt=""></li>
+            <li><img src="/Users/umut/Documents/CODE/Mac-essais bouttons/ressources/volume.png" height="16" width="16"alt=""></li>
+            <li><img src="/Users/umut/Documents/CODE/Mac-essais bouttons/ressources/icons8-full-battery-30.png"height="16" width="16"alt=""></li>
+            <li><img src="/Users/umut/Documents/CODE/Mac-essais bouttons/ressources/wifi.png"height="16" width="16"alt=""></li>
+            <li><img src="/Users/umut/Documents/CODE/Mac-essais bouttons/ressources/search.png"height="16" width="16"alt=""></li>
+            <li><div id = "date" onload="currentDate()"></div></li>
+            <li><div id = "clock" onload="currentTime()"></div></li>
+            
+        </ul>
+    </nav>
+</header>
+    
+<main>
+<section class="files-containers">
+
+  
+    <div class="container-about -about">
+        <div class="items-about trigger">
+            <img class="desktop-btn"width="50" height="50" src="/Users/umut/Documents/CODE/Mac-essais bouttons/ressources/pngegg.png" alt="">
+            <p class="desktop-btn">About Me</p>
+        </div>
+    </div>  
+     <div class="container-skills -skills">
+        <div class="items-skills trigger">
+            <img width="50" height="50" src="/Users/umut/Documents/CODE/Mac-essais bouttons/ressources/pngegg.png" alt="">
+            <p>My skills</p>
+        </div>
+    </div>
+    <div class="container-work -work">
+        <div class="items-work trigger">  
+            <img width="50" height="50" src="/Users/umut/Documents/CODE/Mac-essais bouttons/ressources/folder.png" alt="">
+            <p>My work</p> 
+        </div>
+ 
+    </div>
+   
+ 
+    <div class="container-linkedin -linkedin">
+        <div class="items-linkedin">
+            <img width="50" height="50" src="/Users/umut/Documents/CODE/Mac-essais bouttons/ressources/icons8-linkedin-48.png" alt="">
+            <p>My linkedIn</p>
+        </div>
+    </div>
+</section>
+
+
+<!-- MODAL ABOUT 
+======================================= -->
+
+<section class="modal-about modal" >
+    <div class="modal-nav">
+        <div class="buttons-window">
+            <span class="dot-close"></span>
+            <span class="dot-reduce"></span>
+            <span class="dot-open"></span>
+        </div>
+        <p>About Me</p>
+    </div>
+
+    <div class=container-about>
+        <div class="title-about">
+            <img width="200"src="/Users/umut/Documents/CODE/Mac-essais bouttons/ressources/circle ID.png" alt="">
+            <h1>Hi, I am Thibaud</h1>
+            <p>And I'm a Front-End Developer</p>
+        </div>
+    <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi mollitia eius nemo nihil rerum minima culpa dolore a. Et delectus aspernatur dolores ex deserunt dolorum consequuntur expedita voluptates iste, veniam incidunt sed accusantium at velit, reiciendis, libero itaque cum placeat aperiam! Aspernatur itaque explicabo tenetur voluptatum nemo quibusdam beatae maiores illo sit qui ipsa, quos numquam optio dolore blanditiis, sed commodi dignissimos inventore libero vero, exercitationem dolorem? Numquam pariatur eligendi incidunt? Ullam labore veritatis similique amet, dolore numquam beatae blanditiis reprehenderit? Temporibus magnam, unde molestias nulla maxime excepturi, deleniti et beatae blanditiis sequi sunt voluptatibus asperiores sit saepe. Voluptates, recusandae.</p>
+    </div>
+</section>
+
+<!-- MODAL SKILLS 
+======================================= -->
+
+<section class="modal-skills modal" id="modal-skills">
+    <div class="modal-nav">
+        <div class="buttons-window">
+            <span class="dot-close"></span>
+            <span class="dot-reduce"></span>
+            <span class="dot-open"></span>
+        </div>
+        <p>Skills</p>
+    </div>
+
+    <div class=container-skills>
+        <h1 class="title-skills">My Stack</h1>
+        <img class="skills-image"height="100" width="250" src="/Users/umut/Documents/CODE/Mac-essais bouttons/ressources/html css js.png" alt="">
+        <h1 class="title-skills">My Tools</h1>
+
+        <div class="container-skills-imgages">
+            <img class="skills-image"heigth="30" width="170"src="/Users/umut/Documents/CODE/Mac-essais bouttons/ressources/codepen_logo_icon_169360.png" alt="">
+            <img class="skills-image"heigth="50" width="85"src="/Users/umut/Documents/CODE/Mac-essais bouttons/ressources/github.png" alt="">
+            <img class="skills-image"height="85" width="170"src="/Users/umut/Documents/CODE/Mac-essais bouttons/ressources/stackoverflow.png" alt="">
+        </div>
+    </div>
+</section>
+
+<!-- MODAL WORK 
+======================================= -->
+
+<section class="modal-work modal" id="modal-work">
+    <div class="modal-nav">
+        <div class="buttons-window">
+            <span class="dot-close"></span>
+            <span class="dot-reduce"></span>
+            <span class="dot-open"></span>
+        </div>
+        <p>Work</p>
+    </div> 
+<div class="container-work">
+    <div class="item-work1">
+        <img width="50" height="50" src="/Users/umut/Documents/CODE/Mac-essais bouttons/ressources/folder.png" alt="">    
+        <p>Soba</p>
+    </div>
+    <div class="item-work2">
+        <img width="50" height="50" src="/Users/umut/Documents/CODE/Mac-essais bouttons/ressources/folder.png" alt="">    
+        <p>Example</p>
+    </div>
+    <div class="item-work3">
+        <img width="60" height="40" src="/Users/umut/Documents/CODE/Mac-essais bouttons/ressources/codepen_logo_icon_169360.png" alt="">    
+        <p>My Codepen</p>
+    </div>
+</div>
+</section>
+
+<section class="modal-work1 modal">
+    <div class="modal-nav">
+        <div class="buttons-window">
+            <span id="close-work1"class="dot-close"></span>
+            <span id="reduce-work1"class="dot-reduce"></span>
+            <span id="open-work1"class="dot-open"></span>
+        </div>
+        <p>Work1</p>
+    </div> 
+    <div class="container-work1">
+        <div class="item-work1-git item-work1">
+            <img width="50" height="50" src="/Users/umut/Documents/CODE/Mac-essais bouttons/ressources/GitHub-Mark-32px.png" alt="">
+            <p>GitHub Code</p>
+        </div>
+        <div class="items-work1-read item-work1">
+            <img class="desktop-btn"width="50" height="50" src="/Users/umut/Documents/CODE/Mac-essais bouttons/ressources/pngegg.png" alt="">
+            <p>Readme</p>
+        </div>
+    </div>
+
+
+
+
+</section>
+
+
+
+</main>
+<script src='/Users/umut/Documents/CODE/Mac-essais bouttons/text.js'></script>
+</body>
+</html>
+

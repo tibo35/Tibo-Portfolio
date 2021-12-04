@@ -1,0 +1,67 @@
+body {
+  font-family: "Karla", sans-serif;
+}
+.navigation {
+  height: 100%;
+  position: relative;
+  z-index: 2;
+  min-height: 50px;
+  padding-left: 250px;
+  padding-right: 0;
+  display: flex;
+  line-height: 36px;
+  letter-spacing: 0.05em;
+  font-weight: 400;
+  margin-top: 30px;
+  font-size: 15px;
+  color: #484a54;
+  text-transform: uppercase;
+  box-sizing: border-box;
+}
+.navigation a {
+  height: 100%;
+  display: table;
+  float: left;
+  padding: 0px 20px;
+  list-style: none;
+  justify-content: space-between;
+}
+.navigation a li {
+  text-align: center;
+  display: table-cell;
+  vertical-align: middle;
+  height: 100%;
+}
+.icones {
+  padding-left: 50px;
+  padding-right: 20px;
+  margin-left: 50px;
+  letter-spacing: 5px;
+}
+
+.header-img {
+  max-width: 100%;
+}
+
+.box1 {
+    font-family: "Karla", sans-serif;
+  float: left;
+  width: 33.33%;
+  padding: 100px 0 100px 0px;
+  text-align: center;
+  background-color: rgb(168, 150, 150);
+}
+.box2 {
+    float: left;
+    width: 33.33%;
+    text-align: center;
+    padding: 100px 0 100px 0px;
+  }
+
+  .box3 {
+    float: left;
+    width: 33.33%;
+   background-color: rgb(206, 194, 171);
+    text-align: center;
+    padding: 100px 0 100px 0px;
+  }

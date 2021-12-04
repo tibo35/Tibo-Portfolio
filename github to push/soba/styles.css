@@ -1,0 +1,485 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap");
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Raleway", sans-serif;
+  background-color: black;
+  letter-spacing: 3px;
+}
+
+/* HEADER
+============================================================*/
+header {
+  width: 100%;
+  position: fixed;
+  transition: all 0.15s linear;
+  z-index: 100;
+}
+.navbar {
+  height: 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: black;
+  color: white;
+  font-size: 14px;
+
+  padding: 0 15px 0 15px;
+}
+
+.logo-nav .link-home {
+  font-family: "Fredericka the Great", cursive;
+  font-size: 60px;
+  padding: 30px;
+  color: #f497c0;
+  text-shadow: 2px 2px white;
+}
+
+.navbar-links ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  font-weight: bolder;
+}
+
+.navbar-links li {
+  list-style: none;
+  letter-spacing: 2px;
+}
+
+.navbar-links li a:hover {
+  /* font-size: 16px;  */
+  text-decoration: underline;
+  text-decoration-thickness: 3px;
+  transition: transform 0.3s ease-in-out;
+  line-height: 1, 5;
+  text-decoration-color: #f497c0;
+  border-radius: 30px;
+}
+
+.navbar-links li a {
+  text-transform: uppercase;
+  color: white;
+  padding: 1rem;
+  display: block;
+  font-weight: 900;
+}
+
+.btn-book {
+  border: #f497c0 2px solid;
+
+  margin-right: 1.5rem;
+
+  border-radius: 30px;
+}
+.btn-book:hover {
+  background-color: #f497c0;
+  text-decoration: none;
+  line-height: 1, 5;
+}
+
+/* Toggle-button */
+
+.toggle-button {
+  position: absolute;
+  top: 2.3rem;
+  right: 1.5rem;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+}
+
+.toggle-button .bar {
+  height: 3px;
+  width: 100%;
+  background-color: white;
+  border-radius: 10px;
+}
+
+@media (max-width: 950px) {
+  .toggle-button {
+    display: flex;
+  }
+
+  .navbar-links,
+  .btn-book {
+    display: none;
+    width: 100%;
+    background-color: black;
+  }
+
+  .logo-nav {
+    margin-left: 20%;
+  }
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+  }
+
+  .navbar-links ul {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .navbar-links li {
+    text-align: center;
+  }
+
+  .navbar-links li a {
+    padding: 0.5rem 1rem;
+  }
+
+  .navbar-links.active {
+    display: flex;
+  }
+  .btn-book {
+    border: none;
+  }
+}
+
+/* MAIN HOME-PAGE
+============================================================*/
+
+.main-home {
+  background-color: black;
+}
+/* Container 1
+=================================*/
+
+.home-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.image-home {
+  width: 100%;
+  height: 500px;
+  background-image: url("/Users/umut/Documents/CODE/restaurant mock/ressources/pexels-anna-tis-6341164.jpg");
+  background-position: center center;
+  background-size: cover;
+}
+
+.home-title {
+  text-align: center;
+  color: white;
+  font-size: 35px;
+  text-transform: uppercase;
+  margin: 0 7% 2% 7%;
+  padding: 3%;
+  border-bottom: 2px solid #f497c0;
+}
+
+.home-text {
+  color: white;
+  text-align: left;
+  font-size: 17px;
+  font-weight: 400;
+  padding: 2% 15%;
+  line-height: 28px;
+}
+
+/* Container 2
+=================================*/
+.image-box {
+  background-image: url("/Users/umut/Documents/CODE/restaurant mock/ressources/image2.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-color: black;
+  width: 100%;
+  height: 70vh;
+}
+
+.container2-background {
+  position: absolute;
+  width: 50%;
+  height: 70vh;
+  background-color: black;
+  opacity: 0.7;
+}
+
+.container2-box {
+  width: 50%;
+  height: 70vh;
+  position: absolute;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.btn-book2 {
+  border: #f497c0 2px solid;
+  margin-right: 1.5rem;
+  border-radius: 30px;
+  background-color: black;
+  text-decoration: none;
+  color: white;
+  padding: 1rem;
+  display: block;
+}
+
+.btn-book2:hover {
+  background-color: #f497c0;
+  /* font-size: 18px; */
+
+  transition: all 0.2s ease-in-out;
+}
+
+/* Container 3
+=================================*/
+.home-container3 {
+  display: flex;
+  flex-direction: column;
+}
+.container3-box-title {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  font-size: 35px;
+  text-transform: uppercase;
+  margin: 7%;
+  padding: 3%;
+  border-bottom: 2px solid #f497c0;
+}
+
+.images-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  height: 50vh;
+  width: 100%;
+}
+
+.box1 {
+  display: flex;
+  align-items: center;
+  background-image: url("/Users/umut/Documents/CODE/restaurant mock/ressources/gin.jpg");
+  background-size: cover;
+  background-position: center;
+  margin: 2%;
+}
+.box1:hover,
+.box2:hover {
+  background-size: cover;
+  background-position: center;
+  transition: 0.4s;
+}
+.box1-title,
+.box2-title {
+  width: 100%;
+  color: white;
+  background-color: black;
+  opacity: 0.8;
+  text-align: center;
+  padding: 5%;
+}
+.box1-title:hover {
+  background-color: #f497c0;
+}
+
+.box2 {
+  display: flex;
+  align-items: center;
+  background-image: url("/Users/umut/Documents/CODE/restaurant mock/ressources/whisky.jpg");
+  background-size: cover;
+  margin: 2%;
+  background-position: center;
+}
+
+.box2-title:hover {
+  background-color: #f497c0;
+}
+a {
+  text-decoration: none;
+  color: white;
+}
+
+/* Container 4
+=================================*/
+
+.home-container4 {
+  display: flex;
+  flex-direction: column;
+}
+
+.container4-box-title {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  font-size: 35px;
+  text-transform: uppercase;
+  margin: 7%;
+  padding: 3%;
+  border-bottom: 2px solid #f497c0;
+}
+
+.logos,
+.logo-fb,
+.logo-insta {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 2%;
+  cursor: pointer;
+  background-color: black;
+}
+
+/* MAIN MENU-PAGE
+============================================================*/
+.menu-container1 {
+  display: flex;
+  flex-direction: column;
+}
+.image-menu {
+  height: 60vh;
+  background-image: url("/Users/umut/Documents/CODE/restaurant mock/ressources/menu/pexels-elif-tekkaya-7351946.jpg");
+  background-position: center center;
+  background-size: cover;
+  opacity: 0.8;
+}
+
+.image-menu-tag {
+  color: white;
+  font-size: 45px;
+  font-weight: 700;
+  position: absolute;
+  top: 40%;
+  left: 40%;
+  letter-spacing: 3px;
+}
+
+.menu-container-background {
+  color: black;
+}
+
+.menu-text {
+  color: white;
+  text-align: left;
+  font-size: 17px;
+  font-weight: 400;
+  padding: 2% 10%;
+  line-height: 28px;
+}
+
+/* MAIN MENU-GRID
+======================*/
+
+.section-blocks {
+  background: white;
+  padding: 4% 1%;
+}
+
+.block-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+/* @media(max-width: 1000px){
+  .block-container {
+    max-width: 750px;
+  }
+} */
+
+.block-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 8px 15px;
+  height: 50vh;
+  max-width: 550px;
+  flex: 1 0 40%;
+  background-size: cover;
+  background-position: 50%;
+}
+
+@media (max-width: 1200px) {
+  .block-wrap {
+    max-width: 450px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .block-wrap {
+    max-width: 375px;
+    height: 40vh;
+  }
+}
+
+@media (max-width: 800px) {
+  .block-wrap {
+    max-width: 550px;
+    flex: 0 0 100%;
+    height: 40vh;
+  }
+}
+
+.block-1 {
+  background: url("/Users/umut/Documents/CODE/restaurant mock/ressources/menu/jia-ye-EDGH8ypPDAw-unsplash.jpg");
+  background-size: cover;
+  background-position: 50%;
+}
+.block-2 {
+  background: url("/Users/umut/Documents/CODE/restaurant mock/ressources/menu/16632308251_0e30c7247d_c.jpg");
+  background-size: cover;
+  background-position: 50%;
+}
+.block-3 {
+  background: url("/Users/umut/Documents/CODE/restaurant mock/ressources/menu/dale-scogings-_SBsVi4kmkY-unsplash.jpg");
+  background-size: cover;
+  background-position: 50%;
+}
+.block-4 {
+  background: url("/Users/umut/Documents/CODE/restaurant mock/ressources/menu/samuel-foster-LxD9fZYR2uw-unsplash.jpg");
+  background-size: cover;
+  background-position: 50%;
+}
+.block-title {
+  color: white;
+  font-size: 30px;
+
+  border-radius: 50px;
+  padding: 2%;
+  background-color: black;
+  border: #f497c0 2px solid;
+}
+.block-title:hover {
+  background-color: #f497c0;
+  opacity: none;
+  cursor: pointer;
+}
+
+
+
+
+
+
+
+/* FOOTER 
+=================================*/
+footer {
+  padding: 2%;
+  background-color: rgb(29, 28, 28);
+}
+
+.text1,
+.text2,
+.text3 {
+  text-align: center;
+  color: white;
+  background-color: rgb(29, 28, 28);
+  font-size: 12px;
+}

@@ -1,0 +1,160 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Merriweather", serif;
+}
+
+/* HEADER 
+=======================================================*/
+header {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  background-color: black;
+  justify-content: space-between;
+}
+
+img {
+  width: 40%;
+}
+img:hover{
+  width: 60%;
+}
+
+.header_text {
+  color: white;
+  font-size: 20px;
+}
+.header_text:hover {
+  font-size: 30px;
+}
+
+.nav {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  height: 50px;
+  width: 100%;
+  flex-direction: row;
+  list-style: none;
+  text-decoration: none;
+  text-align: center;
+  font-size: 15px;
+  font-family: "Merriweather", serif;
+}
+
+.nav_link:hover {
+  font-size: 30px;
+  color: aliceblue;
+  font-weight: bold;
+}
+
+header h2 {
+  font-size: 15px;
+  text-align: center;
+}
+
+a {
+  color: white;
+  margin: 1rem;
+  text-decoration: none;
+}
+
+/* MAIN 
+=======================================================*/
+.wrapper {
+  font-family: "Comfortaa", sans-serif;
+  display: flex;
+}
+
+#about {
+  color: white;
+  background: black;
+}
+.nav_section-wrapper {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  height: 50px;
+  width: 100%;
+  flex-direction: row;
+  list-style: none;
+  text-decoration: none;
+  text-align: center;
+  font-size: 15px;
+  font-family: "Merriweather", serif;
+}
+
+.title_about{
+vertical-align: 500px;
+}
+.title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: 100vh;
+  background: rgb(250, 249, 252);
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+}
+
+.scroll {
+  width: 50%;
+  color: white;
+}
+
+.scroll div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.scroll div > h2 {
+  width: 80%;
+  text-align: center;
+}
+
+.scroll div > p {
+  width: 80%;
+}
+
+.scroll div:nth-child(1) {
+  background: black;
+}
+
+.scroll div:nth-child(2) {
+  background: black;
+}
+
+.scroll div:nth-child(3) {
+  background: black;
+}
+.scroll div:nth-child(4) {
+  background: red;
+}
+
+footer {
+  min-height: 10vh;
+  background: black;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  padding: 1rem;
+}

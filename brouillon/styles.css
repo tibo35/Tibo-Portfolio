@@ -1,0 +1,103 @@
+/* .buttons {
+  padding-left: 15px;
+  padding-top: 15px;
+  
+  line-height: 0px;
+  margin-right: 2rem;
+}
+
+.buttons:hover a {
+  visibility: visible;
+}
+
+/*CLOSE*/
+/* 
+.close {
+  background: #ff5c5c;
+  font-size: 9pt;
+  width: 12px;
+  height: 12px;
+  border: 1px solid #e33e41;
+  border-radius: 50%;
+  display: inline-block;
+
+}
+
+span{
+    line-height: 9px;
+    vertical-align: 50%;
+}
+.close:active {
+  background: #c14645;
+  border: 1px solid #b03537;
+}
+
+.close:active .closebutton {
+  color: #4e0002;
+}
+
+.closebutton {
+  color: #820005;
+  visibility: hidden;
+  cursor: default;
+} */
+
+
+/*Minimize*/
+
+/* .minimize {
+  background: #ffbd4c;
+  font-size: 9pt;
+  line-height: 11px;
+  margin-left: 4px;
+  width: 12px;
+  height: 12px;
+  border: 1px solid #e09e3e;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.minimize:active {
+  background: #c08e38;
+  border: 1px solid #af7c33;
+}
+
+.minimize:active .minimizebutton {
+  color: #5a2607;
+}
+
+.minimizebutton {
+  color: #9a5518;
+  visibility: hidden;
+  cursor: default;
+} */
+
+/*Zoom*/
+
+/* .zoom {
+  background: #00ca56;
+  font-size: 9pt;
+  line-height: 11px;
+  margin-left: 6px;
+  width: 12px;
+  height: 12px;
+  border: 1px solid #14ae46;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.zoom:active {
+  background: #029740;
+  border: 1px solid #128435;
+}
+
+.zoom:active .zoombutton {
+  color: #003107;
+}
+
+.zoombutton {
+  color: #006519;
+  visibility: hidden;
+  cursor: default;
+} */ 
+

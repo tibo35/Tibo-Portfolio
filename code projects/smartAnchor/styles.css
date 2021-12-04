@@ -1,0 +1,31 @@
+@import url("https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: url("ressources/background.jpg") no-repeat center center fixed;
+  background-size: cover;
+  font-family: "Julius Sans One", sans-serif;
+}
+.title {
+  color: antiquewhite;
+  position: relative;
+  text-align: center;
+  margin-top: 170px;
+  font-size: 70px;
+  font-weight: 300px;
+}
+label input {
+  border-width: 0;
+  border-radius: 3px;
+  display: inline-block;
+  position: absolute;
+  width: 1px;
+  white-space: nowrap;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  color: antiquewhite;
+}
