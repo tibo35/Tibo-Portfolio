@@ -192,11 +192,11 @@ nav {
   line-height: 10px;
   vertical-align: 50%;
   font-size: 0.9rem;
-  visibility: hidden;
+  display: none;
   font-weight: bolder;
 }
 .buttons-window:hover a {
-  visibility: visible;
+  display: block;
 }
 .arrowBtn {
   margin: 0 1rem 0 1rem;
@@ -462,6 +462,3 @@ a {
 
  */
 
-.modal-box-show {
-  display: none;
-}
