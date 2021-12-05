@@ -150,6 +150,8 @@ nav {
   overflow: scroll;
 }
 
+/* =====================        Nav Bar       ==================*/
+
 .dot-close,
 .dot-reduce,
 .dot-open {
@@ -160,7 +162,12 @@ nav {
   margin: 3px;
 }
 .buttons-window {
-  margin: 10px 37% 0px 15px;
+  display: flex;
+  flex-direction: row;
+  line-height: 10px;
+  vertical-align: 50%;
+  padding: 1rem;
+  align-items: center;
 }
 .dot-close {
   background-color: #ff605c;
@@ -186,9 +193,23 @@ nav {
   vertical-align: 50%;
   font-size: 0.9rem;
   visibility: hidden;
+  font-weight: bolder;
 }
 .buttons-window:hover a {
   visibility: visible;
+}
+.arrowBtn {
+  margin: 0 1rem 0 1rem;
+}
+.arrow-btn{
+  font-size: 1.5rem;
+  margin: 0 0.5rem 0 0.5rem;
+}
+
+.buttons-window p {
+  line-height: 15px;
+  vertical-align: 0%;
+  margin: 0;
 }
 
 /*  SKILLS 
@@ -296,11 +317,7 @@ nav {
   gap: 2rem;
   margin: 20px;
 }
-.work-nav-left {
-  width: 40%;
-  height: 80vh;
-  background-color: rgb(232, 234, 237);
-}
+
 .item-work1 p,
 .item-work2 p,
 .item-work3 p,
@@ -319,12 +336,12 @@ nav {
 
 /* MODAL WORK 
 ============================*/
-.modal-work {
+/* .modal-work {
+  top: 70px;
+  left: 350px;
   min-width: 900px;
   min-height: 500px;
-  top: 120px;
-  left: 250px;
-}
+} */
 
 /* MODAL README 
 ============================*/
@@ -342,10 +359,10 @@ a {
 
 /* README  - SOBA PROJECT
 ============================*/
-.container-soba {
+/* .container-soba {
   top: 160px;
   left: 450px;
-}
+} */
 .content-soba {
   background-color: black;
   color: white;
@@ -413,7 +430,7 @@ a {
   scrollbar-width: none;
   overflow: scroll;
   resize: both;
-  border: rgb(134, 132, 132) 0.5px solid;
+  border: rgba(8, 8, 8, 0.452) 0.4px solid;
 }
 .resizable::-webkit-scrollbar {
   display: none;

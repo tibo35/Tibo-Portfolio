@@ -59,7 +59,7 @@ document.getElementById("date").innerText = today;
 const triggers = document.getElementsByClassName('trigger');
 const modals = document.getElementsByClassName('modal');
 
-
+const backBtn = document.querySelector('.back-btn')
 const closeButtons = document.getElementsByClassName('dot-close');
 const expandButtons = document.getElementsByClassName('dot-open');
 const reduceButtons = document.getElementsByClassName('dot-reduce');
@@ -67,6 +67,9 @@ const reduceButtons = document.getElementsByClassName('dot-reduce');
 const expandArray = Array.from(expandButtons).entries();
 const triggerArray = Array.from(triggers).entries();
 const reduceArray = Array.from(reduceButtons).entries();
+
+
+
 
 
 for (let [i, trigger] of triggerArray){
@@ -87,11 +90,13 @@ for (let [i, trigger] of triggerArray){
   const removeModal = () => {
     modals[i].classList.remove('modal-expand');
     modals[i].classList.remove('show-modal');
-
+   
   }
   closeButtons[i].addEventListener('click', removeModal);
   reduceButtons[i].addEventListener('click', removeModal);
 
+
+ 
 
 // Bring modal widow at the front (zindex)
 
@@ -124,6 +129,17 @@ for(let [i, expand] of expandArray) {
 
 }
 
+
+
+
+// BACK BUTTONS 
+// const backBtn = document.querySelector('.back-btn')
+
+// backBtn.addEventListener('click', back)
+// function back (){
+//   removeModal
+// }
+// // }
 
 
 // ============================ RESIZE AND DRAG =============================
