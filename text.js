@@ -59,7 +59,7 @@ document.getElementById("date").innerText = today;
 const triggers = document.getElementsByClassName('trigger');
 const modals = document.getElementsByClassName('modal');
 
-const backBtn = document.querySelector('.back-btn')
+
 const closeButtons = document.getElementsByClassName('dot-close');
 const expandButtons = document.getElementsByClassName('dot-open');
 const reduceButtons = document.getElementsByClassName('dot-reduce');
@@ -129,11 +129,33 @@ for(let [i, expand] of expandArray) {
 
 }
 
+const nextBtn = document.querySelectorAll('.next-btn')
+const work = document.querySelectorAll('work')
+const soba = document.querySelectorAll('soba')
+const backBtn = document.querySelectorAll('.back-btn')
+const sobaFolder = document.querySelectorAll('.modal > .container-soba-folder') 
+const modalbox = document.querySelectorAll('.modal-box');
+const backArray = Array.from(backBtn).entries()
+const nextArray = Array.from(nextBtn).entries()
 
 
-
+for(let [i, back] of backArray){
 // BACK BUTTONS 
-// const backBtn = document.querySelector('.back-btn')
+const remove = () => {
+
+  document.getElementById('soba').classList.remove('show-modal')
+  return
+  // e[i].classList.add('container-work-folder')
+}
+backBtn[i].addEventListener('click', remove);
+}
+
+// for(let [i, next] of nextArray){
+// const next = () => {
+//   document.getElementById('soba').classList.add('modal-box-show')
+// }
+// nextBtn[i].addEventListener('click', next)
+// }
 
 // backBtn.addEventListener('click', back)
 // function back (){
@@ -147,7 +169,7 @@ for(let [i, expand] of expandArray) {
 
 // DRAG =========
 
-const element = document.querySelectorAll(".resizable");
+const element = document.querySelectorAll(".modal");
 for (let el of element) {
 let isResizing = false;
 

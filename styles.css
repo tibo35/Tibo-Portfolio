@@ -120,6 +120,10 @@ nav {
 /* MODALS - 
 ================================= */
 .modal {
+  position: absolute;
+  scrollbar-width: none;
+  overflow: scroll;
+  border: rgba(8, 8, 8, 0.452) 0.4px solid;
   display: flex;
   visibility: hidden;
   flex-direction: column;
@@ -127,13 +131,9 @@ nav {
   background-color: white;
   height: 600px;
   width: 600px;
-  /* top: 80px;
-  left: 250px; */
   border-radius: 15px;
-  box-shadow: 3px 3px 35px rgba(2, 2, 2, 5.442);
+  box-shadow: 3px 3px 35px rgba(2, 2, 2, 0.442);
   border: rgb(232, 234, 245);
-  /* min-width: 800px;
-  min-height: 600px; */
 }
 
 .show-modal {
@@ -201,7 +201,7 @@ nav {
 .arrowBtn {
   margin: 0 1rem 0 1rem;
 }
-.arrow-btn{
+.arrow-btn {
   font-size: 1.5rem;
   margin: 0 0.5rem 0 0.5rem;
 }
@@ -258,12 +258,14 @@ nav {
 
 /*  ABOUT 
 ================================ */
-.modal-box {
+
+.modal-about {
   top: 100px;
   left: 300px;
   min-width: 900px;
   min-height: 500px;
 }
+
 .content-about {
   background-color: rgb(230, 217, 193);
 }
@@ -309,8 +311,14 @@ nav {
 }
 /* MODAL WORK 
 ============================*/
-
-.container-work-folder {
+.modal-box {
+  top: 100px;
+  left: 300px;
+  min-width: 900px;
+  min-height: 500px;
+}
+.container-work-folder,
+.container-soba-folder {
   display: grid;
   grid-template-columns: repeat(8, 70px);
   grid-template-rows: repeat(3, 100px);
@@ -333,15 +341,6 @@ nav {
   margin-top: 15%;
   text-align: center;
 }
-
-/* MODAL WORK 
-============================*/
-/* .modal-work {
-  top: 70px;
-  left: 350px;
-  min-width: 900px;
-  min-height: 500px;
-} */
 
 /* MODAL README 
 ============================*/
@@ -422,16 +421,8 @@ a {
 }
 
 /* RESIZER  ==================*/
+/* 
 
-.resizable {
-  background: white;
-  box-shadow: 2px 2px 35px rgba(0, 1, 1, 0.442);
-  position: absolute;
-  scrollbar-width: none;
-  overflow: scroll;
-  resize: both;
-  border: rgba(8, 8, 8, 0.452) 0.4px solid;
-}
 .resizable::-webkit-scrollbar {
   display: none;
 }
@@ -467,4 +458,10 @@ a {
   right: -1px;
   bottom: -1px;
   cursor: se-resize;
+}
+
+ */
+
+.modal-box-show {
+  display: none;
 }
