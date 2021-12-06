@@ -69,9 +69,11 @@ const work2 = document.getElementById('work2');
 const work2ReadMe = document.getElementById('work2-readMe');
 const work3 = document.getElementById('work3');
 const work3ReadMe = document.getElementById('work3-readMe');
+const backBtn = document.querySelectorAll('.back-btn');
 
 
-for (let i=0; i < triggers.length; i++){
+
+for (let i = 0; i < triggers.length; i++){
 
 // Open the modal widows
 triggers[i].addEventListener('dblclick', showModal);
@@ -92,97 +94,121 @@ triggers[i].addEventListener('dblclick', bringFront);
 // expand.addEventListener('click', expandModal);
 expandButtons[i].addEventListener('click', expandModal);
 
-
-// ====================   FUNCTIONS =================
-
-
-
 function showModal(){
   modals[i].classList.add('show-modal');
   modals[i].classList.remove('modal-expand');
-
-  // if else statment for the Work modal. if <child> is opening <parent> removed:
-
-
-soba.addEventListener('mouseover', removeWork)
-sobaReadMe.addEventListener('mouseover', removeSoba)
-work2.addEventListener('mouseover', removeWork)
-work2ReadMe.addEventListener('mouseover', removeWork2)
-work3.addEventListener('mouseover', removeWork)
-work3ReadMe.addEventListener('mouseover', removeWork3)
-
-
-function removeWork(){
-      work.style.display='none';
 }
-function removeSoba(){
-  soba.style.display='none';
-}
-function removeWork2 (){
-  work2.style.display='none'
-}
-function removeWork3 (){
-  work3.style.display='none'
-}
-}
-
-
-
-
-function removeModal() {
-  modals[i].classList.remove('modal-expand');
-  modals[i].classList.remove('show-modal');
-};
-
- var zIndex =10;
+var zIndex =10;
 function bringFront(){
   modals[i].style.zIndex = zIndex++;
 };
+function removeModal() {
+  modals[i].classList.remove('modal-expand');
+  modals[i].classList.remove('show-modal'); 
+};
+
 
 function expandModal() {
   modals[i].classList.toggle('modal-expand');
 };
 
-};
-
-// ================     Switch box-modal WORK    =============
-// const container = document.getElementsByClassName('container')
-// const workFolder = document.querySelector('.modal-box-work')
-// const sobaFolder = document.querySelector('.modal-box-sobaContainer')
-// const triggerSobaFolder = document.getElementById('item-work1-trigger')
-// const triggerWork2Folder = document.getElementById('work2-folder-trigger')
-// const modalBox = document.querySelectorAll('.modal-box')
-// const modal = document.querySelectorAll('.modal')
+}
+// ====================   NAV BUTTONS / forwards / backwards =================
 
 
+soba.addEventListener('mouseenter', removeWork)
+sobaReadMe.addEventListener('mouseenter', removeSoba)
+work2.addEventListener('mouseenter', removeWork)
+work2ReadMe.addEventListener('mouseenter', removeWork2)
+work3.addEventListener('mouseenter', removeWork)
+work3ReadMe.addEventListener('mouseenter', removeWork3)
 
-//   triggerSobaFolder.addEventListener('dblclick', openSobaFolder)
-//   // triggerWork2Folder.addEventListener('dbclick', openWork2Folder)
 
-//   function openSobaFolder(){
-//   workFolder.classList.toggle('hide-work-folder')
-// sobaFolder.classList.toggle('show-soba')
+
+// btn-back 
+
+for(let i =0; i < backBtn.length; i++){
+backBtn[i].addEventListener('click', back)
+
+}
+
+function back (){
+if(work3ReadMe.style.zIndex > work3.style.zIndex){
+  removeWork3ReadMe()
   
-    // sobaFolder[i].classList.add('container-soba-folder')
-    // sobaFolder[i].style.visibility='visible';
-    
-  
+} else if (work3.style.zIndex > work.style.zIndex){
+  removeWork3()
+} else if (work2ReadMe.style.zIndex > work2.style.zIndex){
+  removeWork2ReadMe()
+} else if (work2.style.zIndex > work.style.zIndex){
+  removeWork2()
+} else if (sobaReadMe.style.zIndex > soba.style.zIndex){
+  removeSobaReadMe()
+} else if (soba.style.zIndex > work.style.zIndex){
+  removeWorkSoba()
+}
+}
 
-// const workFolder = document.getElementById('work');
-// const triggerBox = document.getElementsByClassName('trigger-box');
-// const modalBox = document.getElementsByClassName('modal-box');
-// const triggerSoba = document.getElementById('item-work1-trigger');
-// const containerSoba = document.getElementById('soba-container');
 
-// for(let i=0; i < modalBox.length; i++){
-// triggerSoba.addEventListener('dblclick', openSobaContainer)
 
-// function openSobaContainer(){
-// workFolder.style.visibility='hidden'
-// containerSoba.style.visibility="visible"
-// return
+  function removeWork(){
+    work.classList.remove('show-modal')
+  }
+  function removeSoba(){
+    soba.classList.remove('show-modal')
+  }
+  function removeWork2 (){
+    work2.classList.remove('show-modal')
+    work.classList.add('show-modal')
+  }
+  function removeWorkSoba (){
+    soba.classList.remove('show-modal')
+    work.classList.add('show-modal')
+  }
+  function removeSobaReadMe(){
+    sobaReadMe.classList.remove('show-modal')
+    soba.classList.add('show-modal')
+  }
+  function removeWork2ReadMe(){
+    work2ReadMe.classList.remove('show-modal')
+    work2.classList.add('show-modal')
+  }
+ 
+  function removeWork3 (){
+    work3.classList.remove('show-modal')
+  }
+  function removeWork3ReadMe(){
+    work3ReadMe.classList.remove('show-modal')
+    work3.classList.add('show-modal')
+  }
+  function removeWork3(){
+    work3.classList.remove('show-modal')
+    work.classList.add('show-modal')
+  }
 
+
+// function removeWork(){
+//   work.style.display='none';
 // }
+// function removeSoba(){
+//   soba.style.display='none';
+// }
+// function removeWork2 (){
+//   work2.style.display='none'
+// }
+// function removeWork3 (){
+//   work3.style.display='none'
+// }
+// function removeWork3ReadMe(){
+//   work3ReadMe.style.display='none'
+//   work3.style.display='block'
+// }
+// function removeWork3(){
+//   work3.style.display='none'
+//   work.style.display='block'
+// }
+
+
 
 
 
@@ -328,4 +354,3 @@ function mouseup() {
 //     }
 //   }
 // }
-
