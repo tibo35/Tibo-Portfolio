@@ -42,15 +42,7 @@ document.getElementById("date").innerText = today;
 }
 currentDate();
 
-
-
-
-
-
 // =====================      MODALS     ====================================
-
-
-
 
 
 // ================     Modal-windows     =============
@@ -62,18 +54,26 @@ const modals = document.getElementsByClassName('modal');
 const closeButtons = document.getElementsByClassName('dot-close');
 const expandButtons = document.getElementsByClassName('dot-open');
 const reduceButtons = document.getElementsByClassName('dot-reduce');
-const soba = document.getElementById('soba');
-const work = document.getElementById('work');
-const sobaReadMe = document.getElementById('soba-readme');
-const work2 = document.getElementById('work2');
-const work2ReadMe = document.getElementById('work2-readMe');
-const work3 = document.getElementById('work3');
-const work3ReadMe = document.getElementById('work3-readMe');
+
+const nextBtn = document.querySelectorAll('.next-btn');
 const backBtn = document.querySelectorAll('.back-btn');
+const work1Folder = document.querySelector('.work1-folder')
+const work2Folder = document.querySelector('.work2-folder')
+const work3Folder = document.querySelector('.work3-folder')
 
+const workFolder = document.getElementById('work-folder')
+const work1Container = document.getElementById('work1-container')
+const work2Container = document.getElementById('work2-container')
+const work3Container = document.getElementById('work3-container')
+const work1IconReadme = document.querySelector('.work1-readme-icon')
+const work2IconReadme = document.querySelector('.work2-readme-icon')
+const work3IconReadme = document.querySelector('.work3-readme-icon')
+const work1ReadMe =  document.querySelector('.work1-readme')
+const work2ReadMe =  document.querySelector('.work2-readme')
+const work3ReadMe =  document.querySelector('.work3-readme')
+const workTitle = document.querySelector('.work-title')
 
-
-for (let i = 0; i < triggers.length; i++){
+for (let i = 0; i < modals.length; i++){
 
 // Open the modal widows
 triggers[i].addEventListener('dblclick', showModal);
@@ -94,10 +94,6 @@ triggers[i].addEventListener('dblclick', bringFront);
 // expand.addEventListener('click', expandModal);
 expandButtons[i].addEventListener('click', expandModal);
 
-function showModal(){
-  modals[i].classList.add('show-modal');
-  modals[i].classList.remove('modal-expand');
-}
 var zIndex =10;
 function bringFront(){
   modals[i].style.zIndex = zIndex++;
@@ -106,157 +102,92 @@ function removeModal() {
   modals[i].classList.remove('modal-expand');
   modals[i].classList.remove('show-modal'); 
 };
-
-
 function expandModal() {
   modals[i].classList.toggle('modal-expand');
 };
+
+function showModal(){
+
+  modals[i].classList.add('show-modal');
+  modals[i].classList.remove('modal-expand');
+
+work1Folder.addEventListener('dblclick', function openSoba(){
+workFolder.style.display='none'
+work1Container.style.display='grid'
+
+})
+work1IconReadme.addEventListener('dblclick', function openSobaReadme(){
+work1Container.style.display='none'
+work1ReadMe.style.display='block'
+
+})
+
+work2Folder.addEventListener('dblclick', function openWork2(){
+workFolder.style.display='none';
+work2Container.style.display='grid'
+})
+
+work2IconReadme.addEventListener('dblclick', function openWork2Readme(){
+work2Container.style.display='none'
+work2ReadMe.style.display='block'
+} )
+work3Folder.addEventListener('dblclick', function openWork3(){
+workFolder.style.display='none';
+work3Container.style.display='grid'
+})
+
+work3IconReadme.addEventListener('dblclick', function openWork3Readme(){
+work3Container.style.display='none'
+work3ReadMe.style.display='block'
+} )
+}
 
 }
 // ====================   NAV BUTTONS / forwards / backwards =================
 
 
-soba.addEventListener('mouseenter', removeWork)
-sobaReadMe.addEventListener('mouseenter', removeSoba)
-work2.addEventListener('mouseenter', removeWork)
-work2ReadMe.addEventListener('mouseenter', removeWork2)
-work3.addEventListener('mouseenter', removeWork)
-work3ReadMe.addEventListener('mouseenter', removeWork3)
 
-
-
-// btn-back 
+// // btn-back 
 
 for(let i =0; i < backBtn.length; i++){
 backBtn[i].addEventListener('click', back)
-
 }
 
 function back (){
-if(work3ReadMe.style.zIndex > work3.style.zIndex){
-  removeWork3ReadMe()
+if(work3ReadMe.style.display === 'block'){
+ work3ReadMe.style.display='none'
+ work3Container.style.display='grid'
+} else if(work3Container.style.display === 'grid'){
+  work3Container.style.display='none'
+  workFolder.style.display='grid'
+} else if (work2ReadMe.style.display === 'block'){
+  work2ReadMe.style.display='none'
+  work2Container.style.display='grid'
+} else if (work2Container.style.display === 'grid'){
+  work2Container.style.display='none'
+  workFolder.style.display='grid'
+} else if (work1ReadMe.style.display === 'block'){
+  work1ReadMe.style.display='none'
+  work1Container.style.display='grid'
+} else if (work1Container.style.display === 'grid'){
+  work1Container.style.display='none'
+  workFolder.style.display='grid'
+}
+}
+
   
-} else if (work3.style.zIndex > work.style.zIndex){
-  removeWork3()
-} else if (work2ReadMe.style.zIndex > work2.style.zIndex){
-  removeWork2ReadMe()
-} else if (work2.style.zIndex > work.style.zIndex){
-  removeWork2()
-} else if (sobaReadMe.style.zIndex > soba.style.zIndex){
-  removeSobaReadMe()
-} else if (soba.style.zIndex > work.style.zIndex){
-  removeWorkSoba()
-}
-}
+// // // next-btn 
+
+// for(let i =0; i < nextBtn.length; i++){
+//   nextBtn[i].addEventListener('click', next)
+//   }
+
+//   function next(){
+//     if()
+//   }
 
 
 
-  function removeWork(){
-    work.classList.remove('show-modal')
-  }
-  function removeSoba(){
-    soba.classList.remove('show-modal')
-  }
-  function removeWork2 (){
-    work2.classList.remove('show-modal')
-    work.classList.add('show-modal')
-  }
-  function removeWorkSoba (){
-    soba.classList.remove('show-modal')
-    work.classList.add('show-modal')
-  }
-  function removeSobaReadMe(){
-    sobaReadMe.classList.remove('show-modal')
-    soba.classList.add('show-modal')
-  }
-  function removeWork2ReadMe(){
-    work2ReadMe.classList.remove('show-modal')
-    work2.classList.add('show-modal')
-  }
- 
-  function removeWork3 (){
-    work3.classList.remove('show-modal')
-  }
-  function removeWork3ReadMe(){
-    work3ReadMe.classList.remove('show-modal')
-    work3.classList.add('show-modal')
-  }
-  function removeWork3(){
-    work3.classList.remove('show-modal')
-    work.classList.add('show-modal')
-  }
-
-
-// function removeWork(){
-//   work.style.display='none';
-// }
-// function removeSoba(){
-//   soba.style.display='none';
-// }
-// function removeWork2 (){
-//   work2.style.display='none'
-// }
-// function removeWork3 (){
-//   work3.style.display='none'
-// }
-// function removeWork3ReadMe(){
-//   work3ReadMe.style.display='none'
-//   work3.style.display='block'
-// }
-// function removeWork3(){
-//   work3.style.display='none'
-//   work.style.display='block'
-// }
-
-
-
-
-
-
-// const triggerBox = document.getElementsByClassName('trigger-box');
-// const modalBox = document.getElementsByClassName('modal-box');
-
-
-// const triggerBox = Array.from(triggerBox).entries();
-
-// for (let [i, trigger] of triggerBox){
-// trigger.addEventListener('dblclick')
-
-// }
-
-// const nextBtn = document.querySelectorAll('.next-btn')
-// const work = document.querySelectorAll('work')
-// const soba = document.querySelectorAll('soba')
-// const backBtn = document.querySelectorAll('.back-btn')
-// const sobaFolder = document.querySelectorAll('.modal > .container-soba-folder') 
-// const modalbox = document.querySelectorAll('.modal-box');
-// const backArray = Array.from(backBtn).entries()
-// const nextArray = Array.from(nextBtn).entries()
-
-
-// for(let [i, back] of backArray){
-// // BACK BUTTONS 
-// const remove = () => {
-
-// document.getElementById('soba').classList.remove('show-modal')
-// return
-// // e[i].classList.add('container-work-folder')
-// }
-// backBtn[i].addEventListener('click', remove);
-// }
-
-// for(let [i, next] of nextArray){
-// const next = () => {
-//   document.getElementById('soba').classList.add('modal-box-show')
-// }
-// nextBtn[i].addEventListener('click', next)
-// }
-
-// backBtn.addEventListener('click', back)
-// function back (){
-//   removeModal
-// }
-// // }
 
 
 // ============================ RESIZE AND DRAG =============================
