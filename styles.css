@@ -69,6 +69,7 @@ nav {
 
 /* =========      dock =========  */
 
+
 .dock {
   width: auto;
   height: 80px;
@@ -81,14 +82,14 @@ nav {
   transform: translateX(-50%);
 }
 .dock .dock-container {
-  padding: 1px;
+  padding: 3px;
   width: auto;
   height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 16px;
-  background: rgba(207, 198, 198, 0.4);
+  background: rgba(243, 231, 231, 0.5);
   backdrop-filter: blur(13px);
   -webkit-backdrop-filter: blur(13px);
   border: 1px solid rgba(255, 255, 255, 0.18);
@@ -96,7 +97,7 @@ nav {
 .dock .dock-container .li-bin {
   margin-left: 20px;
   border-left: 1.5px solid rgba(255, 255, 255, 0.4);
-  padding: 0px 0px;
+  padding: 0px 10px;
 }
 .dock .dock-container .li-1::after {
   position: absolute;
@@ -232,6 +233,7 @@ nav {
   border: rgb(211, 198, 198) 2px solid;
 }
 
+
 .-resume {
   grid-column: 2/3;
   grid-row: 2/3;
@@ -245,7 +247,6 @@ nav {
   grid-column: 2/3;
   grid-row: 4/5;
 }
-
 .items-desktop img {
   margin: 0;
   padding: 0;
@@ -270,7 +271,7 @@ nav {
   flex-direction: column;
   position: absolute;
   background-color: white;
-  height: 650px;
+  height: 600px;
   width: 700px;
   border-radius: 15px;
   box-shadow: 2px 2px 35px rgba(1, 1, 1, 0.442);
@@ -413,7 +414,7 @@ nav {
   left: 300px;
   min-width: 900px;
   min-height: 500px;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 .content-about {
@@ -486,8 +487,9 @@ nav {
   margin: 0;
   padding: 0;
   font-weight: 700;
+  
 }
-.item-work:active p {
+.item-work:active p{
   background-color: rgb(0, 99, 225);
 }
 
@@ -585,6 +587,10 @@ a {
   display: none;
 }
 
+
+
+
+
 /* RESIZER  ==================*/
 
 /* 
@@ -627,6 +633,7 @@ a {
 }
 
  */
+
 
 .display-none {
   display: none;
