@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Thibaud Aptel</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+    <link rel="stylesheet" href="normalize.css">
 
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -14,261 +15,328 @@
 <body>
 
 
-<header>
-    <nav>
-        <ul class="nav-left">
-            <img class="apple-logo"src="ressources/apple-black-logo.png" height="17" width="17"alt="">
-            <li class="list-nav">Finder</li>
-            <li class="list-nav">File</li>
-            <li class="list-nav">Edit</li>
-            <li class="list-nav">Selection</li>
-            <li class="list-nav">View</li>
-            <li class="list-nav">Go</li>
-            <li class="list-nav">Run</li>
-            <li class="list-nav">Terminal</li>
-            <li class="list-nav">Window</li>
-            <li class="list-nav">Help</li>
-        </ul>
-        <ul class="nav-right">
-            <li><img src="ressources/bluetooth.png" height="16" width="16"alt=""></li>
-            <li><img src="ressources/volume.png" height="16" width="16"alt=""></li>
-            <li><img src="ressources/icons8-full-battery-30.png"height="16" width="16"alt=""></li>
-            <li><img src="ressources/wifi.png"height="16" width="16"alt=""></li>
-            <li><img src="ressources/search.png"height="16" width="16"alt=""></li>
-            <li><div id = "date" onload="currentDate()"></div></li>
-            <li><div id = "clock" onload="currentTime()"></div></li>
-            
-        </ul>
-    </nav>
-</header>
-    
-<main>
-    <div class="dock">
-        <div class="dock-container">
-          <li class="li-1">
-            <div class="name">Finder</div>
-            <img class="ico" src="https://uploads-ssl.webflow.com/5f7081c044fb7b3321ac260e/5f70853981255cc36b3a37af_finder.png" alt="">
-          </li>
-          <li class="li-2">
-            <div class="name">Siri</div>
-            <img class="ico" src="https://uploads-ssl.webflow.com/5f7081c044fb7b3321ac260e/5f70853ff3bafbac60495771_siri.png" alt="">
-          </li>
-          <li class="li-3">
-            <div class="name">LaunchPad</div>
-            <img class="ico" src="https://uploads-ssl.webflow.com/5f7081c044fb7b3321ac260e/5f70853943597517f128b9b4_launchpad.png" alt="">
-          </li>
-          <li class="li-4">
-            <div class="name">Contacts</div>
-            <img class="ico" src="https://uploads-ssl.webflow.com/5f7081c044fb7b3321ac260e/5f70853743597518c528b9b3_contacts.png" alt="">
-          </li>
-           <li class="li-12">
-            <div class="container-desktop">
-                <div class="items-desktop trigger">
-                    <img class="ico" src="ressources/about-me.png" alt="">
-                </div>    
-                <p class="name">About Me</p>
-            </div> 
-          </li>
-          <li class="li-8">
-            <div class="container-desktop">
-                <div class="items-desktop trigger">
-                    <img class='ico' src="ressources/skills.png" alt="">
-                </div>    
-                <p class='name'>My skills</p>
-            </div>
-          </li>
-          <li class="li-7">
-            <div class="container-desktop">
-                <div class="items-desktop trigger">  
-                    <img class='ico'width="50" height="50" src="ressources/folder.png" alt="">
-                </div>  
-                  <p class='name'>My work</p> 
-                
-            </div>
-          <li class="li-bin li-15">
-            <div class="name">Bin</div>
-            <img class="ico ico-bin" src="https://findicons.com/files/icons/569/longhorn_objects/128/trash.png" alt="">
-          </li>
-      
-        </div>
-      </div>
-<section class="files-containers">
-    <div class="container-desktop -linkedin"><a href="http://www.linkedin.com/in/thibaud-aptel">
-        <div class="items-desktop">
-            <img width="60" height="60" src="ressources/icons8-linkedin-48.png" alt="">
-        </div>    
-        <p>My linkedIn</p></a>
-        
-    </div>
- 
-     <div class="container-desktop -resume">
-        <div class="items-desktop trigger"type="submit" onclick="window.open('ressources/Thibaud Aptel Resume.pdf')">
-            <img width="60" height="60" src="ressources/pdf.png" alt="">
-        </div>   
-         <p>My Resume</p> 
-    </div>
-    <div class="container-desktop -github"><a href="https://github.com/tibo35">
-        <div class="items-desktop">
-            <img width="80" height="80" src="ressources/github.png" alt="">
-        </div>   
-         <p>My GitHub</p></a>
-    </div>
-</section>
+    <header>
+        <nav>
+            <ul class="nav-left">
+                <img class="apple-logo" src="ressources/apple-black-logo.png" height="17" width="17" alt="">
+                <li class="list-nav">Finder</li>
+                <li class="list-nav">File</li>
+                <li class="list-nav">Edit</li>
+                <li class="list-nav">Selection</li>
+                <li class="list-nav">View</li>
+                <li class="list-nav">Go</li>
+                <li class="list-nav">Run</li>
+                <li class="list-nav">Terminal</li>
+                <li class="list-nav">Window</li>
+                <li class="list-nav">Help</li>
+            </ul>
+            <ul class="nav-right">
+                <li><img src="ressources/bluetooth.png" height="16" width="16" alt=""></li>
+                <li><img src="ressources/volume.png" height="16" width="16" alt=""></li>
+                <li><img src="ressources/icons8-full-battery-30.png" height="16" width="16" alt=""></li>
+                <li><img src="ressources/wifi.png" height="16" width="16" alt=""></li>
+                <li><img src="ressources/search.png" height="16" width="16" alt=""></li>
+                <li>
+                    <div id="date" onload="currentDate()"></div>
+                </li>
+                <li>
+                    <div id="clock" onload="currentTime()"></div>
+                </li>
 
+            </ul>
+        </nav>
+    </header>
 
-<!-- MODAL ABOUT 
-======================================= -->
-<section class=' modal modal-about'>
-        <div class="modal-nav">
-            <div class="buttons-window">
-                <span class="dot-close"><a class="btn-nav"href="#">x</a></span>
-                <span class="dot-reduce"><a class="btn-nav"href="#">-</a></span>
-                <span class="dot-open"><a class="btn-nav"href="#">+</a></span>
-                    <div class='arrowBtn'>
-                        <span class='back-btn'><</span>
-                        <span class='back-btn'>></span>
+    <main>
+        <div class="dock">
+            <div class="dock-container">
+                <li class="li-1">
+                    <div class="name">Finder</div>
+                    <img class="ico"
+                        src="https://uploads-ssl.webflow.com/5f7081c044fb7b3321ac260e/5f70853981255cc36b3a37af_finder.png"
+                        alt="">
+                </li>
+                <li class="li-2">
+                    <div class="name">Siri</div>
+                    <img class="ico"
+                        src="https://uploads-ssl.webflow.com/5f7081c044fb7b3321ac260e/5f70853ff3bafbac60495771_siri.png"
+                        alt="">
+                </li>
+                <li class="li-3">
+                    <div class="name">LaunchPad</div>
+                    <img class="ico"
+                        src="https://uploads-ssl.webflow.com/5f7081c044fb7b3321ac260e/5f70853943597517f128b9b4_launchpad.png"
+                        alt="">
+                </li>
+                <li class="li-4">
+                    <div class="name">Contacts</div>
+                    <img class="ico"
+                        src="https://uploads-ssl.webflow.com/5f7081c044fb7b3321ac260e/5f70853743597518c528b9b3_contacts.png"
+                        alt="">
+                </li>
+                <li class="li-12">
+                    <div class="container-desktop">
+                        <div class="items-desktop trigger">
+                            <img class="ico" src="ressources/about-me.png" alt="">
+                        </div>
+                        <p class="name">About Me</p>
                     </div>
-                        <p>About Me</p>
+                </li>
+                <li class="li-8">
+                    <div class="container-desktop">
+                        <div class="items-desktop trigger">
+                            <img class='ico' src="ressources/skills.png" alt="">
+                        </div>
+                        <p class='name'>My skills</p>
+                    </div>
+                </li>
+                <li class="li-7">
+                    <div class="container-desktop">
+                        <div class="items-desktop trigger">
+                            <img class='ico' width="50" height="50" src="ressources/folder.png" alt="">
+                        </div>
+                        <p class='name'>My work</p>
+
+                    </div>
+                <li class="li-bin li-15">
+                    <div class="name">Bin</div>
+                    <img class="ico ico-bin" src="https://findicons.com/files/icons/569/longhorn_objects/128/trash.png"
+                        alt="">
+                </li>
+
             </div>
         </div>
-        <div class='content-about'>
-            <div class="title-about">
-                <div class="intro-about">
-                    <img width="300"src="ressources/circle ID.png" alt="">
-                    <h1>Hi, my name is Thibaud.<br>I am a<br> <span> < Front-End Developer > </Front-End></span></h1>
+        <section class="files-containers">
+            <div class="container-desktop -linkedin"><a href="http://www.linkedin.com/in/thibaud-aptel">
+                    <div class="items-desktop">
+                        <img width="60" height="60" src="ressources/icons8-linkedin-48.png" alt="">
+                    </div>
+                    <p>My linkedIn</p>
+                </a>
+
+            </div>
+
+            <div class="container-desktop -resume">
+                <div class="items-desktop trigger" type="submit"
+                    onclick="window.open('ressources/Thibaud Aptel Resume.pdf')">
+                    <img width="60" height="60" src="ressources/pdf.png" alt="">
+                </div>
+                <p>My Resume</p>
+            </div>
+            <div class="container-desktop -github"><a href="https://github.com/tibo35">
+                    <div class="items-desktop">
+                        <img width="80" height="80" src="ressources/github.png" alt="">
+                    </div>
+                    <p>My GitHub</p>
+                </a>
+            </div>
+        </section>
+
+
+        <!-- MODAL ABOUT 
+======================================= -->
+        <section class=' modal modal-about'>
+            <div class="modal-nav">
+                <div class="buttons-window">
+                    <span class="dot-close"><a class="btn-nav" href="#">x</a></span>
+                    <span class="dot-reduce"><a class="btn-nav" href="#">-</a></span>
+                    <span class="dot-open"><a class="btn-nav" href="#">+</a></span>
+                    <div class='arrowBtn'>
+                        <span class='back-btn'>&lt;</span>
+                        <span class='next-btn'>&gt;</span>
+                    </div>
+                    <p>About Me</p>
                 </div>
             </div>
-            <p class="text-about">Nothing excites me more than the ability to showcase my skills whether it be a simple layout, or a complex application.<br>
-                <br> I'm deeply <span>&lt;fascinated&gt;</span> by technology and curiosity has driven me to continue <span>&lt;learning&gt;</span> while enjoying the process.<br>
-                <br>I pride myself on the ability to write code and the challenges that arise to do so efficiently.<br>
-                <br>I am <span>&lt;curious&gt;</span>, I love learning new skills and like to <span>&lt;challenge&gt;</span> myself.<br>
-                <br>A <span>&lt;problem solver&gt;</span> at heart, I enjoy researching to understand the issues and then engage my <span>&lt;creativity&gt;</span> to find ways to better solve problems.
-            </p>
-        </div>
-</section>
-
-
-
-
-<!-- MODAL SKILLS 
-======================================= -->
-<section class=' modal modal-skills'>
-        <div class="modal-nav">
-            <div class="buttons-window">
-                <span class="dot-close"><a class="btn-nav"href="#">x</a></span>
-                <span class="dot-reduce"><a class="btn-nav"href="#">-</a></span>
-                <span class="dot-open"><a class="btn-nav"href="#">+</a></span>
-                    <div class='arrowBtn'>
-                        <span class='back-btn'><</span>
-                        <span class='next-btn'>></span>
+            <div class='content-about'>
+                <div class="title-about">
+                    <div class="intro-about">
+                        <img width="300" src="ressources/circle ID.png" alt="">
+                        <h1>Hi, my name is Thibaud.<br>I am a<br> <span>
+                                < Front-End Developer>
+                                    </Front-End>
+                            </span></h1>
                     </div>
-                         <p>Skills</p>
+                </div>
+                <p class="text-about">Nothing excites me more than the ability to showcase my skills whether it be a
+                    simple layout, or a complex application.<br>
+                    <br> I'm deeply <span>&lt;fascinated&gt;</span> by technology and curiosity has driven me to
+                    continue <span>&lt;learning&gt;</span> while enjoying the process.<br>
+                    <br>I pride myself on the ability to write code and the challenges that arise to do so
+                    efficiently.<br>
+                    <br>I am <span>&lt;curious&gt;</span>, I love learning new skills and like to
+                    <span>&lt;challenge&gt;</span> myself.<br>
+                    <br>A <span>&lt;problem solver&gt;</span> at heart, I enjoy researching to understand the issues and
+                    then engage my <span>&lt;creativity&gt;</span> to find ways to better solve problems.
+                </p>
             </div>
-        </div>
+        </section>
+
+
+
+
+        <!-- MODAL SKILLS 
+======================================= -->
+        <section class=' modal modal-skills'>
+            <div class="modal-nav">
+                <div class="buttons-window">
+                    <span class="dot-close"><a class="btn-nav" href="#">x</a></span>
+                    <span class="dot-reduce"><a class="btn-nav" href="#">-</a></span>
+                    <span class="dot-open"><a class="btn-nav" href="#">+</a></span>
+                    <div class='arrowBtn'>
+                        <span class='back-btn'>&lt;</span>
+                                <span class='next-btn'>&gt;</span>
+                    </div>
+                    <p>Skills</p>
+                </div>
+            </div>
             <div class='content-skills'>
                 <div class="container-skills-imgages">
                     <div class="images-row1">
                         <img class="skills-image" width="15%" src="ressources/css.png" alt="">
-                        <img class="skills-image"width="15%"src="ressources/html.png" alt="">
-                        <img class="skills-image"width="15%"src="ressources/js.png" alt="">
-                        <img class="skills-image"width="15%"src="ressources/jquery.png" alt="">
+                        <img class="skills-image" width="15%" src="ressources/html.png" alt="">
+                        <img class="skills-image" width="15%" src="ressources/js.png" alt="">
+                        <img class="skills-image" width="15%" src="ressources/jquery.png" alt="">
                     </div>
-                        <div class='images-row2'>
-                            <img class="skills-image"width="15%"src="ressources/stackoverflow.png" alt="">
-                            <img class="skills-image"width="15%"width="170"src="ressources/git.png" alt="">
-                            <img class="skills-image"width="15%" width="170"src="ressources/github.png" alt="">
-                            <img class="skills-image"width="15%" width="170"src="ressources/codepen_logo_icon_169360.png" alt="">
-                        </div>
+                    <div class='images-row2'>
+                        <img class="skills-image" width="15%" src="ressources/stackoverflow.png" alt="">
+                        <img class="skills-image" width="15%" width="170" src="ressources/git.png" alt="">
+                        <img class="skills-image" width="15%" width="170" src="ressources/github.png" alt="">
+                        <img class="skills-image" width="15%" width="170" src="ressources/codepen_logo_icon_169360.png"
+                            alt="">
+                    </div>
                 </div>
             </div>
-        </div>
-</section>
+            </div>
+        </section>
 
-<!-- MODAL WORK 
+        <!-- MODAL WORK 
 ======================================= -->
-    <section class='modal modal-box'id="work">
+        <section class='modal modal-box' id="work">
             <div class="modal-nav">
                 <div class="buttons-window">
                     <span class="dot-close"><a href="#">x</a></span>
                     <span class="dot-reduce"><a href="#">-</a></span>
                     <span class="dot-open"><a href="#">+</a></span>
-                        <div class='arrowBtn'>
-                            <span class='back-btn'><</span>
-                            <span class='next-btn'>></span>
-                        </div> 
-                        <p class='work-title'>Work</p>
+                    <div class='arrowBtn'>
+                        <span class='back-btn'>&lt;</span>
+                        <span class='next-btn'>&gt;</span>
+                    </div>
+                    <p class='work-title'>Work</p>
                 </div>
             </div>
-        <div id='work-folder'>
-            <div class="container-folder">
-                <div class="item-work work1-folder">
-                    <img width="60" height="60" src="ressources/folder.png" alt="">    
-                    <p>Soba</p>
-                </div>
-                <div class="item-work work2-folder">
-                    <img width="60" height="60" src="ressources/folder.png" alt="">    
-                    <p>Example</p>
-                </div>
-                <div class="item-work work3-folder">
-                    <img width="60" height="60" src="ressources/folder.png" alt="">    
-                    <p>Example2</p>
-                </div>
-            </div>
-        </div>
-<!-- ========================   MODAL - WORK 1 - CONTAINER   ======================= -->
-        <div id='work1-container' class='work1-container'>
-            <div class="container-folder">
-                <div class="item-work">
-                    <a href="https://github.com/tibo35/Soba-Restaurant">
-                    <img width="50" height="50" src="ressources/GitHub-Mark-32px.png" alt="">
-                    <p>GitHub Code</p></a>
-                </div>
-                <div class="item-work work1-readme-icon">
-                    <img class="desktop-btn"width="50" height="50" src="ressources/pngegg.png" alt="">
-                    <p>Readme</p>
+            <div id='work-folder'>
+                <div class="container-folder">
+                    <div class="item-work work1-folder">
+                        <img width="60" height="60" src="ressources/folder.png" alt="">
+                        <p>Soba</p>
+                    </div>
+                    <div class="item-work work2-folder">
+                        <img width="60" height="60" src="ressources/folder.png" alt="">
+                        <p>This Portfolio</p>
+                    </div>
+                    <div class="item-work work3-folder">
+                        <img width="60" height="60" src="ressources/folder.png" alt="">
+                        <p>TDL-App</p>
+                    </div>
                 </div>
             </div>
-        </div>
+            <!-- ========================   MODAL - WORK 1 - CONTAINER   ======================= -->
+            <div id='work1-container' class='work1-container'>
+                <div class="container-folder">
+                    <div class="item-work">
+                        <a href="https://github.com/tibo35/Soba-Restaurant">
+                            <img width="50" height="50" src="ressources/GitHub-Mark-32px.png" alt="">
+                            <p>GitHub Code</p>
+                        </a>
+                    </div>
+                    <div class="item-work work1-readme-icon">
+                        <img class="desktop-btn" width="50" height="50" src="ressources/pngegg.png" alt="">
+                        <p>Readme</p>
+                    </div>
+                </div>
+            </div>
 
 
-<!-- ========================   MODAL- WORK 2 - CONTAINER     ======================= -->
-<div id='work2-container' class='work2-container'>
-    <div class="container-folder">
-        <div class="item-work">
-            <a href="https://github.com/tibo35/Soba-Restaurant">
-            <img width="50" height="50" src="ressources/GitHub-Mark-32px.png" alt="">
-            <p>GitHub Code</p></a>
-        </div>
-        <div class="item-work work2-readme-icon">
-            <img class="desktop-btn"width="50" height="50" src="ressources/pngegg.png" alt="">
-            <p>Readme</p>
-        </div>
-    </div>
-</div>
+            <!-- ========================   MODAL- WORK 2 - CONTAINER     ======================= -->
+            <div id='work2-container' class='work2-container'>
+                <div class="container-folder">
+                    <div class="item-work">
+                        <a href="https://github.com/tibo35/Tibo-Portfolio">
+                            <img width="50" height="50" src="ressources/GitHub-Mark-32px.png" alt="">
+                            <p>GitHub Code</p>
+                        </a>
+                    </div>
+                    <div class="item-work work2-readme-icon">
+                        <img class="desktop-btn" width="50" height="50" src="ressources/pngegg.png" alt="">
+                        <p>Readme</p>
+                    </div>
+                </div>
+            </div>
 
-<!-- ========================   MODAL - WORK 3- CONTAINER      ======================= -->
-<div id='work3-container'class='work3-container'>
-    <div class="container-folder">
-        <div class="item-work">
-            <img width="50" height="50" src="ressources/GitHub-Mark-32px.png" alt="">
-            <p>GitHub Code</p>
-        </div>
-        <div class="item-work work3-readme-icon">
-            <img class="desktop-btn"width="50" height="50" src="ressources/pngegg.png" alt="">
-            <p>Readme</p>
-        </div>
-    </div>
-</div>
+            <!-- ========================   MODAL - WORK 3- CONTAINER      ======================= -->
+            <div id='work3-container' class='work3-container'>
+                <div class="container-folder">
+                    <div class="item-work">
+                        <a href="https://github.com/tibo35/To-Do-List">
+                            <img width="50" height="50" src="ressources/GitHub-Mark-32px.png" alt="">
+                            <p>GitHub Code</p>
+                        </a>
+                    </div>
+                    <div class="item-work work3-readme-icon">
+                        <img class="desktop-btn" width="50" height="50" src="ressources/pngegg.png" alt="">
+                        <p>Readme</p>
+                    </div>
+                </div>
+            </div>
 
-<!-- ========================   READ ME - Soba    ======================= -->
-<div id='work1-readme'class='work1-readme'>
-            <div class="content-soba">
-                <h1 class='soba-title'><span>< SOBA-PROJECT ></span></h1>
-                    <div class='content-soba-box1'>
-                        <img width='50%'src="ressources/project soba/responsive image.png" alt="">
+            <!-- ========================   READ ME - Soba    ======================= -->
+            <div id='work1-readme' class='work1-readme'>
+                <div class='content-readme'>
+                    <div class='project-title'>
+                        <h1><span class='underline'>PROJECT SOBA</span></h1>
+                    </div>
+                    <div class='content-box1'>
+                        <img width='450' src="ressources/soba/responsive-img.png" alt="">
+                        <a href='https://tibo35.github.io/Soba-Restaurant/'><div class='btn-link'>LINK</div></a>
+                    </div>
+                    <div class='content-box2'>
+                        <ul>
+                            <li><img width='250'src="/Users/umut/Documents/CODE/Macportfolio/ressources/soba/Screen Shot 2021-12-11 at 2.07.42 pm.png" alt=""></li>
+                            <li><span class='dot dot-html'></span> 43.3% - HTML </li>
+                            <li><span class='dot dot-css'></span>55.1% - CSS </li>
+                            <li><span class='dot dot-js'></span>1.6% - JAVASCRIPT </li>
+                        </ul>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut accusantium dolores, maiores
+                            voluptatum obcaecati, culpa consequatur quae id nihil debitis libero, reiciendis minima
+                            tenetur? Unde itaque illum ipsa ipsam architecto.</p>
+
+                    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    <!-- <h1 class='soba-title'><span>< SOBA-PROJECT ></span></h1>
+                    <div class='container-1'>
+                        <img width='50%'src="ressources/project soba/responsive-img.png" alt="">
                         <a class="website-link"href="https://tibo35.github.io/Soba-Restaurant/">WEBSITE LINK</a>
                     </div>
-                        <div class='content-soba-box2'>
+                        <div class='container-2'>
                             <div class="technologies">
                             <h2>MADE WITH</h2>
                             <h2>Features</h2>
@@ -280,75 +348,84 @@
                                         <li>CSS animations</li>
                                         <li>JAVASCRIPT</li>
                                     </ul>
-                                    <ul>
-                                        <li><img class="soba-image" width="10%" src="ressources/css.png" alt=""></li>
-                                        <li><img class="soba-image"width="10%"src="ressources/html.png" alt=""></li>
-                                        <li><img class="soba-image"width="10%"src="ressources/js.png" alt=""></li>
-                                    </ul>
-                            
-                                <p> Lorem idgserjkg kse bg kse kbjsen kbnsekjgbknabnaejrane klbnvlaen bvl aelk vFLnwLNln bpsum dolor sit amet consectetur adipisicing elit. Aliquid sunt architecto illum a. Et, perspiciatis eveniet veritatis repellendus laboriosam numquam minima saepe impedit, qui quae tempora eligendi molestias ipsam voluptas. </p>   
-                            </div> 
-             </div>
-</div>
+                                <p> In this project, I cloned an excisting restaurant website and practise to make it more responsive </p>   
+                            </div>  -->
 
 
-<!-- ========================   READ ME - WORK 2    ======================= -->
-<div id='work2-readme' class='work2-readme'>
-    <div class="container-readme">
-        <h1>My Project 2</h1>
-            <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid sunt architecto illum a. Et, perspiciatis eveniet veritatis repellendus laboriosam numquam minima saepe impedit, qui quae tempora eligendi molestias ipsam voluptas. </p>
-    </div>
-</div>
-
-<!-- ========================   READ ME - WORK 3    ======================= -->
-
-
-<div id='work3-readme' class='work3-readme'>
-        <div class="container-readme">
-            <h1>My Project 3</h1>
-                <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid sunt architecto illum a. Et, perspiciatis eveniet veritatis repellendus laboriosam numquam minima saepe impedit, qui quae tempora eligendi molestias ipsam voluptas. </p>
-        </div>
-<div>
-
-</section>
-<!-- MODAL CONTACT ME 
-======================================= -->
-<section class=' modal modal-contact'>
-    <div class="modal-nav">
-        <div class="buttons-window">
-            <span class="dot-close"><a class="btn-nav"href="#">x</a></span>
-            <span class="dot-reduce"><a class="btn-nav"href="#">-</a></span>
-            <span class="dot-open"><a class="btn-nav"href="#">+</a></span>
-                <div class='arrowBtn'>
-                    <span class='back-btn'><</span>
-                    <span class='back-btn'>></span>
                 </div>
+
+
+                <!-- ========================   READ ME - WORK 2    ======================= -->
+                <div id='work2-readme' class='work2-readme'>
+                    <div class="container-readme">
+                        <h1>My Project 2</h1>
+                        <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid sunt architecto illum a.
+                            Et, perspiciatis eveniet veritatis repellendus laboriosam numquam minima saepe impedit, qui
+                            quae tempora eligendi molestias ipsam voluptas. </p>
+                    </div>
+                </div>
+
+                <!-- ========================   READ ME - WORK 3    ======================= -->
+
+
+                <div id='work3-readme' class='work3-readme'>
+                    <div class="container-readme">
+                        <h1>My Project 3</h1>
+                        <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid sunt architecto illum a.
+                            Et, perspiciatis eveniet veritatis repellendus laboriosam numquam minima saepe impedit, qui
+                            quae tempora eligendi molestias ipsam voluptas. </p>
+                    </div>
+                    <div>
+
+        </section>
+        <!-- MODAL CONTACT ME 
+======================================= -->
+        <section class=' modal modal-contact'>
+            <div class="modal-nav">
+                <div class="buttons-window">
+                    <span class="dot-close"><a class="btn-nav" href="#">x</a></span>
+                    <span class="dot-reduce"><a class="btn-nav" href="#">-</a></span>
+                    <span class="dot-open"><a class="btn-nav" href="#">+</a></span>
+                    <div class='arrowBtn'>
+                        <span class='back-btn'>
+                            << /span>
+                                <span class='back-btn'>></span>
+                    </div>
                     <p>Contact me</p>
-        </div>
-    </div>
-    <div class='content-about'>
-        <div class="title-about">
-            <div class="intro-about">
-                <img width="300"src="ressources/circle ID.png" alt="">
-                <h1>Hi, I am Thibaud.<br>I am a<br> <span> < Front-End Developer > </Front-End></span></h1>
+                </div>
             </div>
-        </div>
-        <p class="text-about">Nothing excites me more than the ability to showcase my skills whether it be a simple layout, or a complex application.<br>
-            <br> I'm deeply <span>fascinated</span> by technology and curiosity has driven me to continue <span>learning</span> while enjoying the process.<br>
-            <br>I pride myself on the ability to write code and the challenges that arise to do so efficiently.<br>
-            <br>I am <span>curious</span>, I love learning new skills and like to <span>challenge myself</span>.<br>
-            <br>A <span>problem solver</span> at heart, I enjoy researching to understand the issues and then engage my <span>creativity</span> to find ways to better solve problems.
-        </p>
-    </div>
-</section>
+            <div class='content-about'>
+                <div class="title-about">
+                    <div class="intro-about">
+                        <img width="300" src="ressources/circle ID.png" alt="">
+                        <h1>Hi, I am Thibaud.<br>I am a<br> <span>
+                                < Front-End Developer>
+                                    </Front-End>
+                            </span></h1>
+                    </div>
+                </div>
+                <p class="text-about">Nothing excites me more than the ability to showcase my skills whether it be a
+                    simple layout, or a complex application.<br>
+                    <br> I'm deeply <span>fascinated</span> by technology and curiosity has driven me to continue
+                    <span>learning</span> while enjoying the process.<br>
+                    <br>I pride myself on the ability to write code and the challenges that arise to do so
+                    efficiently.<br>
+                    <br>I am <span>curious</span>, I love learning new skills and like to <span>challenge
+                        myself</span>.<br>
+                    <br>A <span>problem solver</span> at heart, I enjoy researching to understand the issues and then
+                    engage my <span>creativity</span> to find ways to better solve problems.
+                </p>
+            </div>
+        </section>
 
 
 
 
 
-</main>
-<script src='text.js'></script>
-<!-- <script src='brouillon.js'></script> -->
+    </main>
+    <script src='text.js'></script>
+    <!-- <script src='brouillon.js'></script> -->
 
 </body>
+
 </html>

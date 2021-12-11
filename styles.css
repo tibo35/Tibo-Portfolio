@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
+
 * {
   box-sizing: border-box;
   user-select: none;
@@ -68,7 +70,6 @@ nav {
 }
 
 /* =========      dock =========  */
-
 
 .dock {
   width: auto;
@@ -233,7 +234,6 @@ nav {
   border: rgb(211, 198, 198) 2px solid;
 }
 
-
 .-resume {
   grid-column: 2/3;
   grid-row: 2/3;
@@ -328,7 +328,7 @@ nav {
   border-top-right-radius: 15px;
   position: sticky;
   top: 0;
-
+  z-index: 10;
   text-align: center;
 }
 .buttons-window a {
@@ -414,7 +414,7 @@ nav {
   left: 300px;
   min-width: 900px;
   min-height: 500px;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 .content-about {
@@ -487,9 +487,8 @@ nav {
   margin: 0;
   padding: 0;
   font-weight: 700;
-  
 }
-.item-work:active p{
+.item-work:active p {
   background-color: rgb(0, 99, 225);
 }
 
@@ -514,28 +513,108 @@ a {
 
 /* README  - SOBA PROJECT
 ============================*/
-/* .container-soba {
-  top: 160px;
-  left: 450px;
-} */
-.content-soba {
-  background-color: black;
-  color: white;
+.work1-readme {
   display: flex;
-  flex-direction: column;
+  align-items: center;
+  background: rgb(68, 105, 247);
+  background: linear-gradient(
+    238deg,
+    rgba(68, 105, 247, 1) 0%,
+    rgba(246, 91, 245, 1) 100%
+  );
 }
-.content-soba-box1 {
+
+.content-readme {
+  color: white;
+  height: 90vh;
+  margin: 10%;
+  background: rgba(0, 0, 0, 0.6);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(0.5px);
+  -webkit-backdrop-filter: blur(0.5px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+}
+.project-title {
+  font-size: 1rem;
+}
+
+.underline {
+  background-image: linear-gradient(#5f6aca, #ffffff);
+  background-position: bottom center;
+  background-size: 80% 3px;
+  background-repeat: no-repeat;
+  padding-bottom: 10px;
+}
+.content-box1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.content-box2 {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  align-items: center;
+}
+.content-box2 p {
+  margin: 2rem;
+  padding: 5%;
+  text-align: left;
+}
+.content-box2 li {
+  list-style: none;
+  text-align: left;
+}
+
+.btn-link {
+  padding: 1rem 2.5rem;
+  margin: 0 0.5rem 0.3rem 3rem;
+  border-radius: 2rem;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-weight: 300;
+  font-size: 25px;
+  color: #ffffff;
+  background-color: #4eb5f1;
+  text-align: center;
+  transition: all 0.2s;
+}
+.btn-link:hover {
+  background-color: #4095c6;
+}
+.dot {
+  height: 12px;
+  width: 12px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 0.5rem;
+}
+.dot-html {
+  background-color: rgb(228, 77, 37);
+}
+.dot-css {
+  background-color: rgb(85,61,124);
+}
+.dot-js {
+  background-color: rgb(241,224,90);
+}
+
+/* .container-1 {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
   margin: 2rem;
   align-items: center;
 }
-.content-soba-box1 img {
+.container-1 img {
   border-radius: 0.5rem;
 }
 .website-link {
-  color: white;
+  color: black;
   font-size: 2rem;
   border: white 1px solid;
   padding: 1rem;
@@ -548,7 +627,7 @@ a {
   font-size: 3rem;
   font-family: consolas, "Liberation Mono", courier, monospace;
   margin: 0;
-  padding: 5rem;
+  padding: 2rem;
   text-align: center;
   background-color: rgb(230, 217, 193);
 }
@@ -556,10 +635,10 @@ a {
   background-color: white;
   color: gray;
 }
-.content-soba-box2 {
+.container-2 {
   display: flex;
   flex-direction: row;
-  /* padding: 5% 10% 5% 10%; */
+ 
   justify-content: center;
   border: blue 1px solid;
 }
@@ -570,11 +649,11 @@ a {
   display: flex;
   flex-direction: row;
 }
-.content-soba-box2 ul {
+.container-2 ul {
   display: flex;
   flex-direction: row;
   list-style: none;
-}
+} */
 
 .work1-container,
 .work2-container,
@@ -586,10 +665,6 @@ a {
 .work3-readme {
   display: none;
 }
-
-
-
-
 
 /* RESIZER  ==================*/
 
@@ -633,7 +708,6 @@ a {
 }
 
  */
-
 
 .display-none {
   display: none;
