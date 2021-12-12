@@ -275,7 +275,7 @@ nav {
   width: 700px;
   border-radius: 15px;
   box-shadow: 2px 2px 35px rgba(1, 1, 1, 0.442);
-  border: rgb(232, 234, 245);
+  border: rgb(86, 87, 88);
 }
 
 .show-modal {
@@ -414,57 +414,28 @@ nav {
   left: 300px;
   min-width: 900px;
   min-height: 500px;
-  font-family: "Roboto", sans-serif;
 }
-
-.content-about {
-  background-color: rgb(230, 217, 193);
-}
-.title-about {
-  display: flex;
-  justify-content: center;
-  flex-direction: row;
-  text-align: center;
-  padding: 2rem;
-}
-.intro-about {
-  display: flex;
-  flex-direction: row;
-  text-align: left;
-  align-items: center;
-}
-
-.text-about {
+.about-text{
   font-size: 1.5rem;
-  padding: 5rem 8rem;
-  margin: 0 5rem 3rem 5rem;
+  margin: 10%;
   text-align: left;
-  line-height: 1.5;
-  background-color: white;
-  border-radius: 30px;
-  color: black;
-  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset,
-    rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset,
-    rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px,
-    rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px,
-    rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+
 }
-.intro-about h1 {
+.content-box1-about{
+  display: flex;
   margin: 2rem;
-  font-size: 3.5rem;
+  justify-content: space-between;
 }
-.intro-about h1 span {
-  background-color: black;
-  color: white;
-  font-size: 2rem;
-  font-family: consolas, "Liberation Mono", courier, monospace;
+.content-box1-about h1{
+  text-align: left;
+  padding: 2rem;
+font-size: 2rem;
 }
-.text-about span {
-  /* font-size: 2rem; */
-  background-color: rgba(59, 55, 55, 0.664);
-  color: white;
-  font-family: consolas, "Liberation Mono", courier, monospace;
+.content-box1-about h1 span {
+font-size: 3rem;
 }
+
+
 /* MODAL WORK 
 ============================*/
 .modal-box {
@@ -511,9 +482,9 @@ a {
   text-decoration: none;
 }
 
-/* README  - SOBA PROJECT
-============================*/
-.work1-readme {
+/* 
+====================      - README  -     ========*/
+.content {
   display: flex;
   align-items: center;
   background: rgb(68, 105, 247);
@@ -522,12 +493,13 @@ a {
     rgba(68, 105, 247, 1) 0%,
     rgba(246, 91, 245, 1) 100%
   );
+  background-size: cover;
 }
 
-.content-readme {
+.content-container {
   color: white;
-  height: 90vh;
-  margin: 10%;
+
+  margin: 3rem;
   background: rgba(0, 0, 0, 0.6);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   backdrop-filter: blur(0.5px);
@@ -537,7 +509,7 @@ a {
   text-align: center;
   font-family: "Montserrat", sans-serif;
 }
-.project-title {
+.content-title {
   font-size: 1rem;
 }
 
@@ -591,7 +563,7 @@ a {
   width: 12px;
   border-radius: 50%;
   display: inline-block;
-  margin-right: 0.5rem;
+  margin-right: 1rem;
 }
 .dot-html {
   background-color: rgb(228, 77, 37);
@@ -660,9 +632,13 @@ a {
 .work3-container {
   display: none;
 }
-.work1-readme,
-.work2-readme,
-.work3-readme {
+.work1-readme{
+  display: none;
+}
+.work2-readme{
+  display: none;
+}
+.work3-readme{
   display: none;
 }
 

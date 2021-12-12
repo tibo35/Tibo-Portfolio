@@ -188,7 +188,7 @@ work3IconReadme.addEventListener('dblclick', function openWork3Readme(){
   
   
   // dock
-  let icons = document.querySelectorAll(".ico");
+let icons = document.querySelectorAll(".ico");
 let length = icons.length;
 
 icons.forEach((item, index) => {
