@@ -184,27 +184,6 @@ nav {
 .li-7:hover .name {
   visibility: visible !important;
 }
-.li-8:hover .name {
-  visibility: visible !important;
-}
-.li-9:hover .name {
-  visibility: visible !important;
-}
-.li-10:hover .name {
-  visibility: visible !important;
-}
-.li-11:hover .name {
-  visibility: visible !important;
-}
-.li-12:hover .name {
-  visibility: visible !important;
-}
-.li-13:hover .name {
-  visibility: visible !important;
-}
-.li-14:hover .name {
-  visibility: visible !important;
-}
 .li-15:hover .name {
   visibility: visible !important;
 }
@@ -302,6 +281,7 @@ nav {
   border-radius: 50%;
   display: inline-block;
   margin: 4px;
+  box-shadow: gray;
 }
 .buttons-window {
   display: flex;
@@ -314,12 +294,22 @@ nav {
 .dot-close {
   background-color: #ff605c;
 }
+.dot-close:active {
+  background-color: #b34443;
+}
 .dot-reduce {
   background-color: #ffbd44;
+}
+.dot-reduce:active {
+  background-color: #c2933d;
 }
 .dot-open {
   background-color: #00ca4e;
 }
+.dot-open:active {
+  background-color: #188d45;
+}
+
 .modal-nav {
   display: flex;
   flex-direction: row;
@@ -334,12 +324,15 @@ nav {
 .buttons-window a {
   line-height: 10px;
   vertical-align: 50%;
-  font-size: 0.8rem;
+  align-items: center;
+  
   display: none;
-  font-weight: 2000;
 }
 .buttons-window:hover a {
   display: block;
+  color: black;
+  font-weight: bolder;
+  font-size: 0.8rem;
 }
 .arrowBtn {
   margin: 0 1rem 0 1rem;
@@ -410,36 +403,39 @@ nav {
 ================================ */
 
 .modal-about {
-  top: 50px;
+  top: 30px;
   left: 300px;
   min-width: 900px;
   min-height: 500px;
 }
-.about-text{
-  font-size: 1.5rem;
-  margin: 10%;
-  text-align: left;
 
+.about-text {
+  margin: 0;
+  padding-top: 0;
+  font-size: 2rem;
+  padding: 0 15% 0 15%;
+  text-align: left;
 }
-.content-box1-about{
+.content-box1-about {
   display: flex;
   margin: 2rem;
   justify-content: space-between;
+  margin-top: 3rem;
 }
-.content-box1-about h1{
+.content-box1-about h1 {
   text-align: left;
   padding: 2rem;
-font-size: 2rem;
+  font-size: 1.5rem;
 }
 .content-box1-about h1 span {
-font-size: 3rem;
+  font-size: 3rem;
+  margin: .5rem;
 }
-
 
 /* MODAL WORK 
 ============================*/
 .modal-box {
-  top: 100px;
+  top: 50px;
   left: 300px;
   min-width: 900px;
   min-height: 500px;
@@ -536,6 +532,7 @@ a {
   margin: 2rem;
   padding: 5%;
   text-align: left;
+  font-size: 1.2rem;
 }
 .content-box2 li {
   list-style: none;
@@ -569,12 +566,15 @@ a {
   background-color: rgb(228, 77, 37);
 }
 .dot-css {
-  background-color: rgb(85,61,124);
+  background-color: rgb(85, 61, 124);
 }
 .dot-js {
-  background-color: rgb(241,224,90);
+  background-color: rgb(241, 224, 90);
 }
-
+.working-pgs {
+  color: red;
+  font-size: 1rem;
+}
 /* .container-1 {
   display: flex;
   flex-direction: row;
@@ -632,13 +632,13 @@ a {
 .work3-container {
   display: none;
 }
-.work1-readme{
+.work1-readme {
   display: none;
 }
-.work2-readme{
+.work2-readme {
   display: none;
 }
-.work3-readme{
+.work3-readme {
   display: none;
 }
 
