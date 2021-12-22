@@ -1,11 +1,11 @@
 
 
-// ===========================  TIME  ========================
+//time
+
 function currentTime() {
     let date = new Date(); 
     let hh = date.getHours();
     let mm = date.getMinutes();
-    // let ss = date.getSeconds();
     let session = "AM";
   
     if(hh == 0){
@@ -29,12 +29,12 @@ function currentTime() {
   
   
    
-  // ============================ DATE  =======================
-  
+//date
+
   function currentDate() {
   var today = new Date();
   var dd = String(today.getDate()).padStart(2, '0');
-  var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+  var mm = String(today.getMonth() + 1).padStart(2, '0'); 
   var yyyy = today.getFullYear();
   
   today = mm + ' / ' + dd + ' / ' + yyyy;
@@ -42,10 +42,10 @@ function currentTime() {
   }
   currentDate();
   
-  // =====================      MODALS     ====================================
+
   
   
-  // ================     Modal-windows     =============
+// Triggers windows
   
   
   const triggers = document.querySelectorAll('.trigger');
@@ -55,8 +55,6 @@ function currentTime() {
   const expandButtons = document.querySelectorAll('.dot-open');
   const reduceButtons = document.querySelectorAll('.dot-reduce');
 
-const nextBtn = document.querySelectorAll('.next-btn');
-  const backBtn = document.querySelectorAll('.back-btn');
   const work1Folder = document.querySelector('.work1-folder')
   const work2Folder = document.querySelector('.work2-folder')
   const work3Folder = document.querySelector('.work3-folder')
@@ -119,7 +117,6 @@ work1Folder.addEventListener('dblclick', function openSoba(){
 work1IconReadme.addEventListener('dblclick', function openSobaReadme(){
   work1Container.style.display='none'
   work1ReadMe.style.display='block'
-
 })
 
 work2Folder.addEventListener('dblclick', function openWork2(){
@@ -143,12 +140,13 @@ work3IconReadme.addEventListener('dblclick', function openWork3Readme(){
   }
 
   }
-  // ====================   NAV BUTTONS / forwards / backwards =================
-  
   
   
   // // btn-back 
   
+
+const backBtn = document.querySelectorAll('.back-btn');
+
   for(let i =0; i < backBtn.length; i++){
   backBtn[i].addEventListener('click', back)
   }
@@ -175,24 +173,12 @@ work3IconReadme.addEventListener('dblclick', function openWork3Readme(){
   }
 }
 
-    
-  // // // next-btn 
-  
-  // for(let i =0; i < nextBtn.length; i++){
-  //   nextBtn[i].addEventListener('click', next)
-  //   }
-  
-  //   function next(){
-  //     if()
-  //   }
+
   
   
   // dock
 let icons = document.querySelectorAll(".ico");
 let length = icons.length;
-
-
-
 
 const focus = (elem, index) => {
   let previous = index - 1;
@@ -227,8 +213,7 @@ icons.forEach((item, index) => {
 
 
   
-  // ============================ RESIZE AND DRAG =============================
-  
+
   
   // DRAG =========
   
